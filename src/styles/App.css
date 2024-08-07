@@ -1,38 +1,82 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
 }
 
-body{
-  background: #212429;
+body {
+    background: #212429;
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Comfortaa", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Comfortaa", sans-serif;
 }
 
-h1{
-  font-family: Angst, sans-serif;
-  font-size: 90px;
-  font-weight: bold;
+h1 {
+    font-family: Angst, sans-serif;
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
 }
 
-.h1__white{
-  color: white;
+.mainBanner {
+    height: calc(100vh + 100px);
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-.mainBanner{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+.about {
+    margin-top: -100px;
+    padding: 72px;
+    z-index: 1;
+    border: 1px solid rgba(245, 247, 250, 0.06);
+    border-radius: 40px;
+    max-width: 1440px;
+    backdrop-filter: blur(108.73126983642578px);
+    box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
+    background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0) 100%);
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    margin-bottom: 100px;
+}
+
+.text {
+    color: white;
+}
+
+.textBlock{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.imgBlock{
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.imgBlock img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

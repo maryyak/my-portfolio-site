@@ -1,0 +1,22 @@
+/* CustomCursor.css */
+.customCursor,
+.customCursorOutline {
+    pointer-events: none;
+    position: fixed;
+    transform: translate(-50%, -50%); /* центрирует курсор относительно позиции */
+    transition: transform 0.3s ease-in-out;
+    z-index: 9999;
+    border-radius: 50%;
+}
+
+.customCursor {
+    width: 8px;
+    height: 8px;
+    background-color: #F64A4F;
+}
+
+.customCursorOutline{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(246, 74, 79, 0.5);
+}
