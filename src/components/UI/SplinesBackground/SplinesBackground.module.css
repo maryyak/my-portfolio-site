@@ -1,0 +1,28 @@
+.backDecorations{
+    z-index: -1;
+}
+
+.backDecorations div{
+    position: absolute;
+}
+
+.splinesSmallImage{
+    top: -65%;
+    rotate: 266deg;
+    right: -20%;
+}
+
+.splinesLargeImage{
+    left: -7%;
+    top: 47%;
+}
+
+.circleSmallImage{
+    left: 19%;
+    top: 21%;
+}
+
+.circleLargeImage{
+    right: 19%;
+    bottom: 1%;
+}

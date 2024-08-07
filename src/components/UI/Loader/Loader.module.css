@@ -1,0 +1,91 @@
+:root {
+    --loader-color: #fafafa;
+    --loader-bg: #212429;
+    --loader-speed: 1s;
+    --loader-delay: calc(var(--loader-speed) / 6);
+    --loader-size: 4px;
+}
+
+.loader, .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: var(--loader-bg);
+    z-index: -2;
+    transition: all 0.5s ease; /* Переход для всех свойств */
+}
+
+.dots {
+    width: calc(50 * var(--loader-size));
+    height: calc(50 * var(--loader-size));
+    position: absolute;
+    transition: width 0.5s ease, height 0.5s ease; /* Переход для размеров */
+}
+
+.ring {
+    border: calc(1.5 * var(--loader-size)) solid var(--loader-color);
+    width: calc(34 * var(--loader-size));
+    height: calc(34 * var(--loader-size));
+    border-radius: 100%;
+    z-index: 0;
+    box-shadow: 0 0 0 calc(1 * var(--loader-size)) var(--loader-bg), 0 0 0 calc(1 * var(--loader-size)) var(--loader-bg) inset;
+    transition: border-width 0.5s ease, width 0.5s ease, height 0.5s ease; /* Переход для размеров */
+}
+
+.dot {
+    width: 50%;
+    position: absolute;
+    height: calc(7 * var(--loader-size));
+    left: 0;
+    transform-origin: 100% 50%;
+    z-index: -1;
+    animation: over-ring calc(var(--loader-speed) * 2) linear 0s infinite, spin calc(var(--loader-speed) * 8) linear 0s infinite;
+}
+
+.dot:before {
+    content: "";
+    width: calc(5.5 * var(--loader-size));
+    height: calc(5.5 * var(--loader-size));
+    left: 0;
+    box-sizing: border-box;
+    border: calc(1 * var(--loader-size)) solid var(--loader-bg);
+    position: absolute;
+    background: var(--loader-color);
+    border-radius: 100%;
+    animation: ball var(--loader-speed) ease-in-out 0s infinite alternate;
+}
+
+.animate {
+    animation: resize 3010ms linear; /* Анимация при добавлении класса */
+}
+
+@keyframes resize {
+    0% {
+        --loader-size: 4px;
+    }
+    35% {
+        --loader-size: 6px;
+    }
+    100% {
+        --loader-size: 0px;
+    }
+}
+
+@keyframes spin {
+    100% { transform: rotate(-360deg); }
+}
+
+@keyframes ball {
+    100% { left: calc(12 * var(--loader-size)); width: calc(4 * var(--loader-size)); height: calc(4 * var(--loader-size)); }
+}
+
+@keyframes over-ring {
+    0%, 50% { z-index: -1; }
+    51%, 100% { z-index: 1; }
+}
