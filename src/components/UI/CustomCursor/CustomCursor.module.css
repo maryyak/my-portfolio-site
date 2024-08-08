@@ -1,22 +1,45 @@
-/* CustomCursor.css */
 .customCursor,
 .customCursorOutline {
     pointer-events: none;
     position: fixed;
-    transform: translate(-50%, -50%); /* центрирует курсор относительно позиции */
-    transition: transform 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     z-index: 9999;
     border-radius: 50%;
+}
+
+.customCursor.hidden,
+.customCursorOutline.hidden{
+    opacity: 0;
 }
 
 .customCursor {
     width: 8px;
     height: 8px;
-    background-color: #F64A4F;
+    background-color: white;
 }
 
 .customCursorOutline{
-    width: 60px;
-    height: 60px;
-    background-color: rgba(246, 74, 79, 0.5);
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.customCursor.pressed, .customCursor.pointer{
+    background-color: #651FFF;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.customCursorOutline.pressed, .customCursorOutline.pointer{
+    transform: scale(1.5) translate(-31%, -31%);
+    border: 3px solid rgba(101, 31, 255, 0.5);
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.customCursor.pointer{
+    transform: scale(1);
+}
+
+.customCursor.pressed{
+    transform: scale(0.5);
 }

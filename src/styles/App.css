@@ -5,8 +5,12 @@
     cursor: none;
 }
 
+:root{
+    --background-color: #180E49;
+}
+
 body {
-    background: #212429;
+    background: var(--background-color);
 }
 
 .App {

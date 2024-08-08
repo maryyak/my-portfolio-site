@@ -1,6 +1,6 @@
 :root {
     --loader-color: #fafafa;
-    --loader-bg: #212429;
+    --loader-bg: var(--background-color);
     --loader-speed: 1s;
     --loader-delay: calc(var(--loader-speed) / 6);
     --loader-size: 4px;

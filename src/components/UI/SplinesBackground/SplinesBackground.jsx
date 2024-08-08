@@ -22,7 +22,7 @@ const SplinesBackground = ({ options = DEFAULT_OPTIONS}) => {
                             rotate: 0
                         }}
                         transition={options.transition}>
-                <img src={splinesLargeImage} alt="Splines"/>
+                <img src={splinesLargeImage} alt="Splines" draggable="false"/>
             </motion.div>
             <motion.div className={styles.splinesLargeImage}
                         initial={{
@@ -34,7 +34,7 @@ const SplinesBackground = ({ options = DEFAULT_OPTIONS}) => {
                             rotate: 0
                         }}
                         transition={options.transition}>
-                <img src={splinesLargeImage} alt="Splines"/>
+                <img src={splinesLargeImage} alt="Splines" draggable="false"/>
             </motion.div>
             <motion.div className={styles.circleSmallImage}
                         initial={{
@@ -50,7 +50,7 @@ const SplinesBackground = ({ options = DEFAULT_OPTIONS}) => {
                             top: '21%'
                         }}
                         transition={options.transition}>
-                <img src={circleSmallImage} alt="Splines"/>
+                <img src={circleSmallImage} alt="Splines" draggable="false"/>
             </motion.div>
             <motion.div className={styles.circleLargeImage}
                         initial={{
@@ -66,7 +66,7 @@ const SplinesBackground = ({ options = DEFAULT_OPTIONS}) => {
                             bottom: '1%'
                         }}
                         transition={options.transition}>
-                <img src={circleLargeImage} alt="Splines"/>
+                <img src={circleLargeImage} alt="Splines" draggable="false"/>
             </motion.div>
         </div>
     );

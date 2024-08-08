@@ -7,7 +7,7 @@ const Div = styled.div.withConfig({
 })`
     &::before {
         content: '';
-        animation-delay: ${({ delay }) => `calc(var(--loader-delay) * -${delay})`};
+        animation-delay: ${({delay}) => `calc(var(--loader-delay) * -${delay})`};
     }
 `;
 
