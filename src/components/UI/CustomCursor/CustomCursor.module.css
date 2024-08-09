@@ -26,13 +26,13 @@
 }
 
 .customCursor.pressed, .customCursor.pointer{
-    background-color: #651FFF;
+    background-color: var(--hover-color);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .customCursorOutline.pressed, .customCursorOutline.pointer{
     transform: scale(1.5) translate(-31%, -31%);
-    border: 3px solid rgba(101, 31, 255, 0.5);
+    border: 3px solid rgba(var(--hover-color-rgb), 0.5);
     transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 

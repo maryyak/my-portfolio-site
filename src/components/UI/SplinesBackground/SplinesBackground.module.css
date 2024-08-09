@@ -13,16 +13,16 @@
 }
 
 .splinesLargeImage{
-    left: -5%;
+    left: 0;
     top: 44%;
 }
 
 .circleSmallImage{
     left: 19%;
-    top: 21%;
+    top: 30%;
 }
 
 .circleLargeImage{
-    right: 19%;
-    bottom: 1%;
+    right: 4%;
+    bottom: 5%;
 }

@@ -1,5 +1,5 @@
 :root {
-    --loader-color: #fafafa;
+    --loader-color: #D1C4E9;
     --loader-bg: var(--background-color);
     --loader-speed: 1s;
     --loader-delay: calc(var(--loader-speed) / 6);

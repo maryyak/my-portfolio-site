@@ -7,6 +7,8 @@
 
 :root{
     --background-color: #180E49;
+    --hover-color: #f8bbd0;
+    --hover-color-rgb: 248, 187, 208;
 }
 
 body {
@@ -18,6 +20,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: "Comfortaa", sans-serif;
+    overflow: hidden;
 }
 
 h1 {
@@ -27,9 +30,38 @@ h1 {
     color: white;
 }
 
+.container{
+    padding-right: 30px;
+    padding-left: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.logo{
+    font-family: Iglets, sans-serif;
+    color: white;
+}
+
+.logo__large{
+    font-size: 65px;
+}
+
+.logo__navbar{
+    font-size: 33px;
+    padding-bottom: 45px;
+}
+
+.logo__navbar:hover{
+    color: var(--hover-color);
+    transition: color 0.4s ease-in-out;
+    font-weight: bold;
+}
+
 .mainBanner {
-    height: calc(100vh + 100px);
-    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,11 +69,9 @@ h1 {
     z-index: 1;
     position: relative;
     width: 100%;
-    overflow: hidden;
 }
 
 .about {
-    margin-top: -100px;
     padding: 72px;
     z-index: 1;
     border: 1px solid rgba(245, 247, 250, 0.06);
@@ -55,12 +85,12 @@ h1 {
     gap: 100px;
     flex-wrap: nowrap;
     justify-content: space-between;
-
-    margin-bottom: 100px;
+    position: relative;
 }
 
 .text {
-    color: white;
+    color: #D1C4E9;
+    line-height: 170%;
 }
 
 .textBlock{
@@ -83,4 +113,8 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.container__mainBanner{
+    align-items: flex-start;
 }

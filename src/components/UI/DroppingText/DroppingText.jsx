@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect, useRef} from 'react';
 import styles from './DroppingText.module.css';
 
 const DEFAULT_OPTIONS = {
@@ -11,6 +11,7 @@ const DEFAULT_OPTIONS = {
 };
 
 const DroppingText = ({ options = DEFAULT_OPTIONS, text }) => {
+    const containerRef = useRef(null);
 
     const injectSVGFilter = () => {
         const filter = `
@@ -21,7 +22,7 @@ const DroppingText = ({ options = DEFAULT_OPTIONS, text }) => {
         </filter>
       </svg>
     `;
-        document.querySelector('.canvas').insertAdjacentHTML("beforeend", filter);
+        containerRef.current.insertAdjacentHTML("beforeend", filter);
     };
 
     const wrapLetters = (word) => {
@@ -32,7 +33,8 @@ const DroppingText = ({ options = DEFAULT_OPTIONS, text }) => {
     };
 
     const addDelayToEachLetter = () => {
-        const letters = document.querySelectorAll(`.${styles[options.letterClassName]}`);
+        const letters = containerRef.current.querySelectorAll(`.${styles[options.letterClassName]}`);
+        console.log(text, letters)
         Array.from(letters, ($letter, index) => {
             const delay = index * options.delayBetweenDrops;
             $letter.style.cssText += `--delay:${delay}ms`;
@@ -42,11 +44,29 @@ const DroppingText = ({ options = DEFAULT_OPTIONS, text }) => {
     useEffect(() => {
         injectSVGFilter();
         addDelayToEachLetter();
-        document.querySelector('.canvas').classList.add(styles["canvas--animated"]);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    containerRef.current.classList.add(styles["canvas--animated"]);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const currentRef = containerRef.current;
+        if (currentRef) {
+            observer.observe(currentRef);
+        }
+
+        return () => {
+            if (currentRef) {
+                observer.unobserve(currentRef);
+            }
+        };
     }, []);
 
     return (
-        <div className="canvas">
+        <div className={styles.canvas} ref={containerRef}>
             <div className={styles.puddle}>
                 {wrapLetters(text)}
             </div>
