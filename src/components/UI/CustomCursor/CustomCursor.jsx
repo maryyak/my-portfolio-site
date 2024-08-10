@@ -7,6 +7,7 @@ const CustomCursor = () => {
     const [mousePressed, setMousePressed] = useState(false);
     const [cursorHidden, setCursorHidden] = useState(true);
     const [cursorPointer, setCursorPointer] = useState(false);
+    const [cursorMagnified, setCursorMagnified] = useState(false);
 
     useEffect(() => {
         const handleMouseMove = (event) => {
@@ -43,6 +44,12 @@ const CustomCursor = () => {
             } else {
                 setCursorPointer(false);
             }
+
+            if (element.closest('.magnified')) {
+                setCursorMagnified(true);
+            } else {
+                setCursorMagnified(false);
+            }
         };
 
         const handleMouseOut = () => setCursorPointer(false);
@@ -69,7 +76,7 @@ const CustomCursor = () => {
                 style={{left: `${positionCursor.x}px`, top: `${positionCursor.y}px`}}
             />
             <div
-                className={`${styles.customCursorOutline} ${cursorHidden ? styles.hidden : ''} ${mousePressed ? styles.pressed : ''} ${cursorPointer ? styles.pointer : ''}`}
+                className={`${styles.customCursorOutline} ${cursorHidden ? styles.hidden : ''} ${mousePressed ? styles.pressed : ''} ${cursorPointer ? styles.pointer : ''} ${cursorMagnified ? styles.magnified : ''}`}
                 style={{left: `${positionOutline.x}px`, top: `${positionOutline.y}px`}}
             />
         </>

@@ -1,0 +1,35 @@
+.animate{
+    transition: transform 0.5s;
+}
+
+.bottomAppear{
+    transform: translateY(200%);
+}
+
+.bottomAppear.animate{
+    transform: translateY(0%);
+}
+
+.rightAppear{
+    transform: translateX(120%);
+}
+
+.rightAppear.animate{
+    transform: translateX(0%);
+}
+
+.leftAppear{
+    transform: translateX(-120%);
+}
+
+.leftAppear.animate{
+    transform: translateX(0%);
+}
+
+.topAppear{
+    transform: translateY(-200%);
+}
+
+.topAppear.animate{
+    transform: translateX(0%);
+}

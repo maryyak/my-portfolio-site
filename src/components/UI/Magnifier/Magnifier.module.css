@@ -1,0 +1,34 @@
+.imgContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.magnifier {
+    position: absolute;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    opacity: 0;
+}
+
+.magnifier.hide{
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    transition: width 0.2s, height 0.2s, opacity 0.2s;
+}
+
+.magnifier.show{
+    width: 120px;
+    height: 120px;
+    opacity: 1;
+    transition: width 0.2s, height 0.2s, opacity 0.2s;
+}

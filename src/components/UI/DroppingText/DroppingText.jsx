@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import styles from './DroppingText.module.css';
+import useObserver from "../../../hooks/useObserver";
 
 const DEFAULT_OPTIONS = {
     textSelector: ".puddle",
@@ -10,7 +11,7 @@ const DEFAULT_OPTIONS = {
     wordAngleRange: [-3, 3]
 };
 
-const DroppingText = ({ options = DEFAULT_OPTIONS, text }) => {
+const DroppingText = ({options = DEFAULT_OPTIONS, text}) => {
     const containerRef = useRef(null);
 
     const injectSVGFilter = () => {
@@ -34,7 +35,6 @@ const DroppingText = ({ options = DEFAULT_OPTIONS, text }) => {
 
     const addDelayToEachLetter = () => {
         const letters = containerRef.current.querySelectorAll(`.${styles[options.letterClassName]}`);
-        console.log(text, letters)
         Array.from(letters, ($letter, index) => {
             const delay = index * options.delayBetweenDrops;
             $letter.style.cssText += `--delay:${delay}ms`;
@@ -44,26 +44,9 @@ const DroppingText = ({ options = DEFAULT_OPTIONS, text }) => {
     useEffect(() => {
         injectSVGFilter();
         addDelayToEachLetter();
+    })
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    containerRef.current.classList.add(styles["canvas--animated"]);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        const currentRef = containerRef.current;
-        if (currentRef) {
-            observer.observe(currentRef);
-        }
-
-        return () => {
-            if (currentRef) {
-                observer.unobserve(currentRef);
-            }
-        };
-    }, []);
+    useObserver({containerRef: containerRef, classToAdd: "canvas--animated", stylesheet: styles});
 
     return (
         <div className={styles.canvas} ref={containerRef}>

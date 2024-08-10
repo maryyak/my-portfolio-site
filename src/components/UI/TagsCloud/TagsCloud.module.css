@@ -1,0 +1,35 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.tagsCloud {
+    height: 60vmin;
+    width: 60vmin;
+    list-style: none;
+    opacity: 0;
+    color: #778da9;
+    position: relative;
+}
+
+.tagsCloud.loaded {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.tagsCloud > .tag {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 5vmin;
+    font-weight: bold;
+    transition: transform 0.5s linear, opacity 0.5s linear;
+}
+
+.tagsCloud > .tag > .wrap {
+    display: inline-block;
+    transform: translateX(-50%) translateY(-50%);
+}

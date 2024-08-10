@@ -4,13 +4,17 @@
     position: fixed;
     transform: translate(-50%, -50%);
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    z-index: 9999;
+    z-index: 999;
     border-radius: 50%;
 }
 
 .customCursor.hidden,
-.customCursorOutline.hidden{
+.customCursorOutline.hidden {
     opacity: 0;
+}
+
+.customCursorOutline.magnified {
+    display: none;
 }
 
 .customCursor {
@@ -19,27 +23,27 @@
     background-color: white;
 }
 
-.customCursorOutline{
+.customCursorOutline {
     width: 80px;
     height: 80px;
     border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-.customCursor.pressed, .customCursor.pointer{
+.customCursor.pressed, .customCursor.pointer {
     background-color: var(--hover-color);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.customCursorOutline.pressed, .customCursorOutline.pointer{
+.customCursorOutline.pressed, .customCursorOutline.pointer {
     transform: scale(1.5) translate(-31%, -31%);
     border: 3px solid rgba(var(--hover-color-rgb), 0.5);
     transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
-.customCursor.pointer{
+.customCursor.pointer {
     transform: scale(1);
 }
 
-.customCursor.pressed{
+.customCursor.pressed {
     transform: scale(0.5);
 }

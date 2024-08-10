@@ -27,13 +27,26 @@ const NavbarContent = () => {
     )
 }
 
+const getPageHeight = () => {
+    const body = document.body;
+    const html = document.documentElement;
+
+    const pageHeight = Math.max(
+        body.scrollHeight, html.scrollHeight,
+        body.offsetHeight, html.offsetHeight,
+        body.clientHeight, html.clientHeight
+    );
+
+    return pageHeight;
+};
+
 const Navbar = () => {
     const [scrolledHeight, setScrolledHeight] = useState(0);
     const navbarRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = (event) => {
-            const paintedHeight = navbarRef.current.offsetHeight * (window.scrollY / window.innerHeight);
+            const paintedHeight = navbarRef.current.offsetHeight * (window.scrollY / (getPageHeight() - window.innerHeight));
             setScrolledHeight(paintedHeight)
         }
 
