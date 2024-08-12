@@ -33,3 +33,11 @@
 .topAppear.animate{
     transform: translateX(0%);
 }
+
+.rotateAppear{
+    transform: rotate(80deg);
+}
+
+.rotateAppear.animate{
+    transform: rotate(0);
+}

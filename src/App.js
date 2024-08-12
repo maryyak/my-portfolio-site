@@ -6,17 +6,19 @@ import SplinesBackground from "./components/UI/SplinesBackground/SplinesBackgrou
 import DroppingText from "./components/UI/DroppingText/DroppingText";
 import usePageLoading from "./hooks/usePageLoading";
 import meImage from './assets/images/IMG_7521.PNG';
+import splinesLargeImage from './assets/images/Splines-2.png';
 import CustomCursor from "./components/UI/CustomCursor/CustomCursor";
 import NextScreenButton from "./components/UI/NextScreenButton/NextScreenButton";
 import {motion} from "framer-motion";
 import React from "react";
 import AppearElement from "./components/UI/AppearElement/AppearElement";
 import TagsCloud from "./components/UI/TagsCloud/TagsCloud";
+import SpinningSphere from "./components/UI/SpinningSphere/SpinningSphere";
 
 const tags = [
     "HTML", "CSS", "JavaScript", "PHP", "Python", "C++", "Wordpress",
     "Tilda", "React", "jQuery", "Bootstrap", "Figma",
-    "Photoshop", "SQLite", "Git", "JSON", "FTP", "API"
+    "Photoshop", "SQLite", "Git", "JSON", "FTP", "API", "BEM", "Three.js"
 ];
 
 function App() {
@@ -53,6 +55,11 @@ function App() {
                         <SplinesBackground/>
                     </div>
                     <div id="about" className="container">
+                        <AppearElement from={"rotate"}>
+                            <div className="about_background">
+                                <img src={splinesLargeImage} alt="splines"/>
+                            </div>
+                        </AppearElement>
                         <div className="about">
                             <div className="textBlock">
                                 <h1>
@@ -83,7 +90,7 @@ function App() {
                             </AppearElement>
                         </div>
                     </div>
-                    <div className="container">
+                    <div id="stack" className="container">
                         <div className="stack">
                             <div className="backgroundHeading">
                                 <DroppingText text={'MY STACK'}/>
@@ -115,6 +122,7 @@ function App() {
                                             <div className="stack_heading">Libraries and Tools</div>
                                             <div className="stack_ul">
                                                 <div className="stack_li">React</div>
+                                                <div className="stack_li">Three.js</div>
                                                 <div className="stack_li">jQuery</div>
                                                 <div className="stack_li">Bootstrap</div>
                                             </div>
@@ -132,6 +140,7 @@ function App() {
                                                     <div className="stack_li">API</div>
                                                     <div className="stack_li">Photoshop</div>
                                                     <div className="stack_li">JSON</div>
+                                                    <div className="stack_li">BEM</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -139,6 +148,14 @@ function App() {
                                 </div>
                             </AppearElement>
                             <TagsCloud tags={tags}/>
+                        </div>
+                    </div>
+                    <div id="works" className="container">
+                        <div className="works">
+                            <h1>
+                                <DroppingText text={'WORKS'}/>
+                            </h1>
+                            <SpinningSphere/>
                         </div>
                     </div>
                     <div className="container"></div>

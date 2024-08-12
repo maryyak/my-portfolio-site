@@ -12,7 +12,11 @@ const NavbarContent = () => {
                 <div className={`${styles.navbarLink} cursorPointer`}>About</div>
             </AnchorScroll>
             <div className={styles.separator}></div>
-            <AnchorScroll to="#">
+            <AnchorScroll to="#stack">
+                <div className={`${styles.navbarLink} cursorPointer`}>Stack</div>
+            </AnchorScroll>
+            <div className={styles.separator}></div>
+            <AnchorScroll to="#works">
                 <div className={`${styles.navbarLink} cursorPointer`}>Works</div>
             </AnchorScroll>
             <div className={styles.separator}></div>

@@ -39,6 +39,7 @@ h1 {
     height: 100vh;
     max-width: 1440px;
     width: 100%;
+    position: relative;
 }
 
 .logo{
@@ -189,4 +190,11 @@ h1 {
     font-size: 24px;
     line-height: 150%;
     color: #d1c4e9;
+}
+
+.about_background{
+    position: absolute;
+    right: -65%;
+    bottom: -61%;
+    rotate: 326deg;
 }
