@@ -6,7 +6,10 @@ import SplinesBackground from "./components/UI/SplinesBackground/SplinesBackgrou
 import DroppingText from "./components/UI/DroppingText/DroppingText";
 import usePageLoading from "./hooks/usePageLoading";
 import meImage from './assets/images/IMG_7521.PNG';
+import parallax from './assets/images/Parallax.png';
+import parallax2 from './assets/images/Parallax-2.png';
 import splinesLargeImage from './assets/images/Splines-2.png';
+import portfolio1 from './assets/images/Portfolio_car-trunks.png';
 import CustomCursor from "./components/UI/CustomCursor/CustomCursor";
 import NextScreenButton from "./components/UI/NextScreenButton/NextScreenButton";
 import {motion} from "framer-motion";
@@ -14,6 +17,7 @@ import React from "react";
 import AppearElement from "./components/UI/AppearElement/AppearElement";
 import TagsCloud from "./components/UI/TagsCloud/TagsCloud";
 import SpinningSphere from "./components/UI/SpinningSphere/SpinningSphere";
+import Carousel from "./components/UI/Carousel/Carousel";
 
 const tags = [
     "HTML", "CSS", "JavaScript", "PHP", "Python", "C++", "Wordpress",
@@ -33,7 +37,7 @@ function App() {
                 <div className="App">
                     <Navbar/>
                     <CustomCursor/>
-                    <div className="mainBanner" id="main">
+                    <div id="main" className="mainBanner">
                         <div className="container container__mainBanner">
                             <motion.div
                                 initial={{
@@ -150,12 +154,52 @@ function App() {
                             <TagsCloud tags={tags}/>
                         </div>
                     </div>
-                    <div id="works" className="container">
-                        <div className="works">
+                    <div id="works" className="works">
+                        <div className="works_background works_background__left">
+                            <img src={parallax} alt={'parallax'}/>
+                        </div>
+                        <div className="works_background works_background__right">
+                            <img src={parallax2} alt={'parallax'}/>
+                        </div>
+                        <div className="container container__works">
                             <h1>
                                 <DroppingText text={'WORKS'}/>
                             </h1>
-                            <SpinningSphere/>
+                            <div className="works_content">
+                                <SpinningSphere/>
+                                <Carousel visibleItems={3} gap={30}>
+                                    <div className="works_item">
+                                        <div className="works_image">
+                                            <img src={portfolio1}/>
+                                        </div>
+                                        <div className="works_name">Car trunks</div>
+                                    </div>
+                                    <div className="works_item">
+                                        <div className="works_image">
+                                            <img src={portfolio1}/>
+                                        </div>
+                                        <div className="works_name">Car trunks</div>
+                                    </div>
+                                    <div className="works_item">
+                                        <div className="works_image">
+                                            <img src={portfolio1}/>
+                                        </div>
+                                        <div className="works_name">Car trunks</div>
+                                    </div>
+                                    <div className="works_item">
+                                        <div className="works_image">
+                                            <img src={portfolio1}/>
+                                        </div>
+                                        <div className="works_name">Car trunks</div>
+                                    </div>
+                                    <div className="works_item">
+                                        <div className="works_image">
+                                            <img src={portfolio1}/>
+                                        </div>
+                                        <div className="works_name">Car trunks</div>
+                                    </div>
+                                </Carousel>
+                            </div>
                         </div>
                     </div>
                     <div className="container"></div>

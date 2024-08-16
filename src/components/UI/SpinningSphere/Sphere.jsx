@@ -3,29 +3,26 @@ import { useGLTF } from '@react-three/drei'
 import sphereModel from '../../../assets/models/sphere/sphere.gltf';
 import {useFrame} from "@react-three/fiber";
 
+const spinSphere = (modelRef, spinX, spinY) => {
+    if (modelRef.current) {
+        modelRef.current.rotation.x += spinX;
+        modelRef.current.rotation.y += spinY;
+    }
+}
+
 export function Sphere(props) {
     const { nodes, materials } = useGLTF(`${sphereModel}`)
     const modelRef = useRef();
 
-    useFrame(() => {
-        if (modelRef.current) {
-            modelRef.current.rotation.x += 0.01;
-            modelRef.current.rotation.y += 0.01;
-        }
-    });
+    useFrame(() => spinSphere(modelRef, 0.01, 0.01));
 
     useEffect(() => {
-        const handleScroll = () => {
-            if (modelRef.current) {
-                modelRef.current.rotation.x += 0.1;
-                modelRef.current.rotation.y += 0.1;
-            }
-        };
+        const handleScroll = () => spinSphere(modelRef, 0.2, 0.2);
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('wheel', handleScroll);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('wheel', handleScroll);
         };
     }, []);
 

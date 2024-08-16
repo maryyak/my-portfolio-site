@@ -1,0 +1,46 @@
+.carousel {
+    position: relative;
+}
+
+.carouselContent {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.carouselTrack{
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.carouselItem {
+    display: block;
+    transition: transform 0.5s ease-in-out;
+    height: 275px;
+    z-index: 3;
+}
+
+.carouselItem.current{
+    transform: scale(1.5);
+    z-index: 4;
+}
+
+.carouselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prevButton {
+    left: 10px;
+}
+
+.nextButton {
+    right: 10px;
+}
