@@ -1,28 +1,47 @@
-import {useEffect, useRef} from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useEffect, useRef } from 'react';
+import { useGLTF, useFrame } from '@react-three/drei';
 import sphereModel from '../../../assets/models/sphere/sphere.gltf';
-import {useFrame} from "@react-three/fiber";
-
-const spinSphere = (modelRef, spinX, spinY) => {
-    if (modelRef.current) {
-        modelRef.current.rotation.x += spinX;
-        modelRef.current.rotation.y += spinY;
-    }
-}
 
 export function Sphere(props) {
-    const { nodes, materials } = useGLTF(`${sphereModel}`)
+    const { nodes, materials } = useGLTF(sphereModel);
     const modelRef = useRef();
+    const rotationAxisRef = useRef([1, 0, 0]);
+    const rotationAngleRef = useRef(0);
+    const rotationSpeedRef = useRef(0);
+    const frameRequestIdRef = useRef(null);
 
-    useFrame(() => spinSphere(modelRef, 0.01, 0.01));
+    const rotateModel = () => {
+        if (!modelRef.current) return;
+
+        modelRef.current.rotation.x += rotationSpeedRef.current * rotationAxisRef.current[0];
+        modelRef.current.rotation.y += rotationSpeedRef.current * rotationAxisRef.current[1];
+    };
+
+    const updateRotation = () => {
+        rotationAngleRef.current += rotationSpeedRef.current;
+        rotateModel();
+        frameRequestIdRef.current = requestAnimationFrame(updateRotation);
+    };
 
     useEffect(() => {
-        const handleScroll = () => spinSphere(modelRef, 0.2, 0.2);
+        const onMouseMove = (e) => {
+            const deltaX = e.clientX - window.innerWidth / 2;
+            const deltaY = e.clientY - window.innerHeight / 2;
+            const a = Math.atan2(deltaX, deltaY) - Math.PI / 2;
+            const axis = [Math.sin(a), Math.cos(a), 0];
+            const delta = Math.sqrt(deltaX ** 2 + deltaY ** 2);
+            const speed = delta / Math.max(window.innerHeight, window.innerWidth) / 10;
 
-        window.addEventListener('wheel', handleScroll);
+            rotationAxisRef.current = axis;
+            rotationSpeedRef.current = speed;
+        };
+
+        document.addEventListener('mousemove', onMouseMove);
+        updateRotation();
 
         return () => {
-            window.removeEventListener('wheel', handleScroll);
+            cancelAnimationFrame(frameRequestIdRef.current);
+            document.removeEventListener('mousemove', onMouseMove);
         };
     }, []);
 
@@ -35,7 +54,7 @@ export function Sphere(props) {
                 </group>
             </group>
         </mesh>
-    )
+    );
 }
 
-useGLTF.preload(`${sphereModel}`)
+useGLTF.preload(sphereModel);

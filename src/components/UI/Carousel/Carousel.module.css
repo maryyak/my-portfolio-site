@@ -28,19 +28,21 @@
 .carouselButton {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: rgba(24, 14, 73, 0.3);
     border: none;
-    padding: 10px;
-    cursor: pointer;
+    padding: 0;
+    width: 90px;
     z-index: 2;
+    border-radius: 50%;
+    filter: blur(30px);
 }
 
 .prevButton {
     left: 10px;
+    transform: rotate(180deg) translateY(50%);
 }
 
 .nextButton {
     right: 10px;
+    transform: translateY(-50%);
 }

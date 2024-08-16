@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import styles from './Carousel.module.css';
+import arrow from '../../../assets/images/arrow.png'
 
 const Carousel = ({children, visibleItems = 1, gap = 0}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,9 +55,9 @@ const Carousel = ({children, visibleItems = 1, gap = 0}) => {
 
     return (
         <div className={styles.carousel} ref={carouselRef}>
-            <button onClick={handlePrev} className={`${styles.carouselButton} ${styles.prevButton}`}>
-                Prev
-            </button>
+            {/*<button onClick={handlePrev} className={`${styles.carouselButton} ${styles.prevButton}`}>*/}
+            {/*    <img src={arrow} alt="arrow"/>*/}
+            {/*</button>*/}
             <div className={styles.carouselContent}>
                 <div className={styles.carouselTrack}
                      style={{
@@ -69,15 +70,21 @@ const Carousel = ({children, visibleItems = 1, gap = 0}) => {
                         const isActive = currentIndex === index;
 
                         return React.cloneElement(child, {
-                            className: `${styles.carouselItem} ${isActive ? styles.current: ''} ${child.props.className || ''} ${isActive ? `current`: ''}`,
-                            style: { width: itemWidth, ...child.props.style }
+                            className: `${styles.carouselItem} ${isActive ? styles.current: ''} ${child.props.className || ''} ${isActive ? `current cursorPointer`: ''}`,
+                            style: { width: itemWidth, ...child.props.style },
+                            onClick: (event) => {
+                                if (!isActive) {
+                                    event.preventDefault();
+                                }
+                                setCurrentIndex(index);
+                            },
                         });
                     })}
                 </div>
             </div>
-            <button onClick={handleNext} className={`${styles.carouselButton} ${styles.nextButton}`}>
-                Next
-            </button>
+            {/*<button onClick={handleNext} className={`${styles.carouselButton} ${styles.nextButton}`}>*/}
+            {/*    <img src={arrow} alt="arrow"/>*/}
+            {/*</button>*/}
         </div>
     );
 };

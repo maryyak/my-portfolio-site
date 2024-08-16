@@ -10,6 +10,15 @@ import parallax from './assets/images/Parallax.png';
 import parallax2 from './assets/images/Parallax-2.png';
 import splinesLargeImage from './assets/images/Splines-2.png';
 import portfolio1 from './assets/images/Portfolio_car-trunks.png';
+import portfolio2 from './assets/images/Portfolio_standart-moving.png';
+import portfolio3 from './assets/images/Portfolio_artel-project.png';
+import portfolio4 from './assets/images/Portfolio_artmir.png';
+import portfolio5 from './assets/images/Portfolio_fastening-solutions.png';
+import portfolio6 from './assets/images/Portfolio_klatzhaus.png';
+import portfolio7 from './assets/images/Portfolio_onsint.png';
+import portfolio8 from './assets/images/Portfolio_cards-vest.png';
+import portfolio9 from './assets/images/Portfolio_bionica-alania.png';
+import portfolio10 from './assets/images/Portfolio_stav-group.png';
 import CustomCursor from "./components/UI/CustomCursor/CustomCursor";
 import NextScreenButton from "./components/UI/NextScreenButton/NextScreenButton";
 import {motion} from "framer-motion";
@@ -162,44 +171,146 @@ function App() {
                             <img src={parallax2} alt={'parallax'}/>
                         </div>
                         <div className="container container__works">
-                            <h1>
-                                <DroppingText text={'WORKS'}/>
-                            </h1>
-                            <div className="works_content">
-                                <SpinningSphere/>
-                                <Carousel visibleItems={3} gap={30}>
-                                    <div className="works_item">
-                                        <div className="works_image">
-                                            <img src={portfolio1}/>
-                                        </div>
-                                        <div className="works_name">Car trunks</div>
+                            <div className="combined-heading">
+                                <h1>
+                                    <DroppingText text={'WORKS'}/>
+                                </h1>
+                                <AppearElement from={"right"}>
+                                    <div className="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                     </div>
-                                    <div className="works_item">
-                                        <div className="works_image">
-                                            <img src={portfolio1}/>
-                                        </div>
-                                        <div className="works_name">Car trunks</div>
-                                    </div>
-                                    <div className="works_item">
-                                        <div className="works_image">
-                                            <img src={portfolio1}/>
-                                        </div>
-                                        <div className="works_name">Car trunks</div>
-                                    </div>
-                                    <div className="works_item">
-                                        <div className="works_image">
-                                            <img src={portfolio1}/>
-                                        </div>
-                                        <div className="works_name">Car trunks</div>
-                                    </div>
-                                    <div className="works_item">
-                                        <div className="works_image">
-                                            <img src={portfolio1}/>
-                                        </div>
-                                        <div className="works_name">Car trunks</div>
-                                    </div>
-                                </Carousel>
+                                </AppearElement>
                             </div>
+                            <AppearElement from={"bottom"}>
+                                <div className="works_content">
+                                    <SpinningSphere/>
+                                    <Carousel visibleItems={3} gap={30}>
+                                        <div className="works_item">
+                                            <div className="works_image">
+                                                <img src={portfolio1}/>
+                                            </div>
+                                            <div className="works_description">
+                                                <div className="works_name">Car trunks</div>
+                                                <div className="works_tags">
+                                                    <div className="works_tag">Wordpress</div>
+                                                    <div className="works_tag">Wordpress</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="works_item">
+                                            <div className="works_image">
+                                                <img src={portfolio2}/>
+                                            </div>
+                                            <div className="works_description">
+                                                <div className="works_name">Standart moving</div>
+                                                <div className="works_tags">
+                                                    <div className="works_tag">Wordpress</div>
+                                                    <div className="works_tag">Wordpress</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="works_item">
+                                            <div className="works_image">
+                                                <img src={portfolio3}/>
+                                            </div>
+                                            <div className="works_description">
+                                                <div className="works_name">Artel project</div>
+                                                <div className="works_tags">
+                                                    <div className="works_tag">Wordpress</div>
+                                                    <div className="works_tag">Wordpress</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="https://kuhni-artmir.ru/" className="works_item">
+                                            <div className="works_image">
+                                                <img src={portfolio4} alt="Artmir"/>
+                                            </div>
+                                            <div className="works_description">
+                                                <div className="works_name">Artmir</div>
+                                                <div className="works_tags">
+                                                    <div className="works_tag">Wordpress</div>
+                                                    <div className="works_tag">Wordpress</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div className="works_item">
+                                            <div className="works_image">
+                                                <img src={portfolio5}/>
+                                            </div>
+                                            <div className="works_description">
+                                                <div className="works_name">Fastening solutions</div>
+                                                <div className="works_tags">
+                                                    <div className="works_tag">Wordpress</div>
+                                                    <div className="works_tag">Wordpress</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="works_item">
+                                            <div className="works_image">
+                                                <img src={portfolio6}/>
+                                            </div>
+                                            <div className="works_description">
+                                                <div className="works_name">Klatzhaus</div>
+                                                <div className="works_tags">
+                                                    <div className="works_tag">Wordpress</div>
+                                                    <div className="works_tag">Wordpress</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="works_item">
+                                            <div className="works_image">
+                                                <img src={portfolio7}/>
+                                            </div>
+                                            <div className="works_description">
+                                                <div className="works_name">Onsint</div>
+                                                <div className="works_tags">
+                                                    <div className="works_tag">Wordpress</div>
+                                                    <div className="works_tag">Wordpress</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="works_item">
+                                            <div className="works_image">
+                                                <img src={portfolio8}/>
+                                            </div>
+                                            <div className="works_description">
+                                                <div className="works_name">Cards vest</div>
+                                                <div className="works_tags">
+                                                    <div className="works_tag">Wordpress</div>
+                                                    <div className="works_tag">Wordpress</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="works_item">
+                                            <div className="works_image">
+                                                <img src={portfolio9}/>
+                                            </div>
+                                            <div className="works_description">
+                                                <div className="works_name">Bionica Alania</div>
+                                                <div className="works_tags">
+                                                    <div className="works_tag">Wordpress</div>
+                                                    <div className="works_tag">Wordpress</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="works_item">
+                                            <div className="works_image">
+                                                <img src={portfolio10}/>
+                                            </div>
+                                            <div className="works_description">
+                                                <div className="works_name">Stav group</div>
+                                                <div className="works_tags">
+                                                    <div className="works_tag">Wordpress</div>
+                                                    <div className="works_tag">Wordpress</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Carousel>
+                                </div>
+                            </AppearElement>
                         </div>
                     </div>
                     <div className="container"></div>

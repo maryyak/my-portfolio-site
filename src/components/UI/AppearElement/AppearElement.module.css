@@ -3,7 +3,7 @@
 }
 
 .bottomAppear{
-    transform: translateY(200%);
+    transform: translateY(100%);
 }
 
 .bottomAppear.animate{
@@ -11,7 +11,7 @@
 }
 
 .rightAppear{
-    transform: translateX(120%);
+    transform: translateX(100%);
 }
 
 .rightAppear.animate{
