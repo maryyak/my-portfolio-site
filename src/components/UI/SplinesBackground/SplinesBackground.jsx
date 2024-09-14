@@ -1,7 +1,4 @@
 import React from 'react';
-import splinesLargeImage from '../../../assets/images/Splines-2.png';
-import circleSmallImage from '../../../assets/images/Circle-2.png';
-import circleLargeImage from '../../../assets/images/Circle-1.png';
 import styles from './SplinesBackground.module.css';
 import {motion} from 'framer-motion';
 
@@ -22,7 +19,7 @@ const SplinesBackground = ({ options = DEFAULT_OPTIONS}) => {
                             rotate: 0
                         }}
                         transition={options.transition}>
-                <img src={splinesLargeImage} alt="Splines" draggable="false"/>
+                <img src="/images/Splines-2.png" alt="Splines" draggable="false"/>
             </motion.div>
             <motion.div className={styles.splinesLargeImage}
                         initial={{
@@ -34,7 +31,7 @@ const SplinesBackground = ({ options = DEFAULT_OPTIONS}) => {
                             rotate: 0
                         }}
                         transition={options.transition}>
-                <img src={splinesLargeImage} alt="Splines" draggable="false"/>
+                <img src="/images/Splines-2.png" alt="Splines" draggable="false"/>
             </motion.div>
             <motion.div className={styles.circleSmallImage}
                         initial={{
@@ -50,7 +47,7 @@ const SplinesBackground = ({ options = DEFAULT_OPTIONS}) => {
                             top: '30%'
                         }}
                         transition={options.transition}>
-                <img src={circleSmallImage} alt="Splines" draggable="false"/>
+                <img src="/images/Circle-2.png" alt="Splines" draggable="false"/>
             </motion.div>
             <motion.div className={styles.circleLargeImage}
                         initial={{
@@ -66,7 +63,7 @@ const SplinesBackground = ({ options = DEFAULT_OPTIONS}) => {
                             bottom: '5%'
                         }}
                         transition={options.transition}>
-                <img src={circleLargeImage} alt="Splines" draggable="false"/>
+                <img src="/images/Circle-1.png" alt="Splines" draggable="false"/>
             </motion.div>
         </div>
     );

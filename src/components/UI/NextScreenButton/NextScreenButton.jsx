@@ -1,5 +1,5 @@
 import React from 'react';
-import {ReactComponent as BtnImage} from '../../../assets/images/DownButton.svg';
+import {ReactComponent as BtnImage} from '../../../assets/svg/DownButton.svg';
 import styles from './NextScreenButton.module.css'
 import AnchorScroll from "../../AnchorScroll";
 

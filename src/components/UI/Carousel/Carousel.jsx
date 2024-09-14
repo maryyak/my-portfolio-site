@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
 import styles from './Carousel.module.css';
-import arrow from '../../../assets/images/arrow.png'
 
 const Carousel = ({children, visibleItems = 1, gap = 0}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,8 +32,10 @@ const Carousel = ({children, visibleItems = 1, gap = 0}) => {
         carouselRef.current.addEventListener('wheel', handleScroll);
 
         return () => {
-            carouselRef.current.removeEventListener('wheel', handleScroll);
-        }
+            if (carouselRef.current) {
+                carouselRef.current.removeEventListener('wheel', handleScroll);
+            }
+        };
     }, [])
 
     const handlePrev = () => {
@@ -56,7 +57,7 @@ const Carousel = ({children, visibleItems = 1, gap = 0}) => {
     return (
         <div className={styles.carousel} ref={carouselRef}>
             {/*<button onClick={handlePrev} className={`${styles.carouselButton} ${styles.prevButton}`}>*/}
-            {/*    <img src={arrow} alt="arrow"/>*/}
+            {/*    <img src="/assets/images/arrow.png" alt="arrow"/>*/}
             {/*</button>*/}
             <div className={styles.carouselContent}>
                 <div className={styles.carouselTrack}
@@ -83,7 +84,7 @@ const Carousel = ({children, visibleItems = 1, gap = 0}) => {
                 </div>
             </div>
             {/*<button onClick={handleNext} className={`${styles.carouselButton} ${styles.nextButton}`}>*/}
-            {/*    <img src={arrow} alt="arrow"/>*/}
+            {/*    <img src="/assets/images/arrow.png" alt="arrow"/>*/}
             {/*</button>*/}
         </div>
     );
