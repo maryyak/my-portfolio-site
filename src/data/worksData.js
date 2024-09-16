@@ -50,7 +50,8 @@ const worksData = {
             '/images/Portfolio_fastening-solutions_1.png',
             '/images/Portfolio_fastening-solutions_2.png',
             '/images/Portfolio_fastening-solutions_3.png',
-            '/images/Portfolio_fastening-solutions_4.png'
+            '/images/Portfolio_fastening-solutions_4.png',
+            '/images/Portfolio_fastening-solutions_5.png'
         ],
         link: 'https://xn--e1aaaaadrj4adpkg7itb9d.xn--p1ai/'
     },
@@ -61,7 +62,15 @@ const worksData = {
             '/images/Portfolio_klatzhaus_1.png',
             '/images/Portfolio_klatzhaus_2.png',
             '/images/Portfolio_klatzhaus_3.png',
-            '/images/Portfolio_klatzhaus_4.png'
+            '/images/Portfolio_klatzhaus_4.png',
+            '/images/Portfolio_klatzhaus_5.png',
+            '/images/Portfolio_klatzhaus_6.png',
+            '/images/Portfolio_klatzhaus_7.png',
+            '/images/Portfolio_klatzhaus_8.png',
+            '/images/Portfolio_klatzhaus_9.png',
+            '/images/Portfolio_klatzhaus_10.png',
+            '/images/Portfolio_klatzhaus_11.png',
+            '/images/Portfolio_klatzhaus_12.png'
         ],
         link: 'none'
     },
@@ -72,7 +81,14 @@ const worksData = {
             '/images/Portfolio_onsint_1.png',
             '/images/Portfolio_onsint_2.png',
             '/images/Portfolio_onsint_3.png',
-            '/images/Portfolio_onsint_4.png'
+            '/images/Portfolio_onsint_4.png',
+            '/images/Portfolio_onsint_5.png',
+            '/images/Portfolio_onsint_6.png',
+            '/images/Portfolio_onsint_7.png',
+            '/images/Portfolio_onsint_8.png',
+            '/images/Portfolio_onsint_9.png',
+            '/images/Portfolio_onsint_10.png',
+            '/images/Portfolio_onsint_11.png'
         ],
         link: 'https://onsint.ru/'
     },
@@ -83,7 +99,10 @@ const worksData = {
             '/images/Portfolio_cards-vest_1.png',
             '/images/Portfolio_cards-vest_2.png',
             '/images/Portfolio_cards-vest_3.png',
-            '/images/Portfolio_cards-vest_4.png'
+            '/images/Portfolio_cards-vest_4.png',
+            '/images/Portfolio_cards-vest_5.png',
+            '/images/Portfolio_cards-vest_6.png',
+            '/images/Portfolio_cards-vest_7.png'
         ],
         link: 'none'
     },
@@ -94,7 +113,11 @@ const worksData = {
             '/images/Portfolio_bionica-alania_1.png',
             '/images/Portfolio_bionica-alania_2.png',
             '/images/Portfolio_bionica-alania_3.png',
-            '/images/Portfolio_bionica-alania_4.png'
+            '/images/Portfolio_bionica-alania_4.png',
+            '/images/Portfolio_bionica-alania_5.png',
+            '/images/Portfolio_bionica-alania_6.png',
+            '/images/Portfolio_bionica-alania_7.png',
+            '/images/Portfolio_bionica-alania_8.png'
         ],
         link: 'none'
     },

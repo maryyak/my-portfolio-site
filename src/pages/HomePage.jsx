@@ -164,15 +164,27 @@ const HomePage = () => {
                         <div className="works_content">
                             <SpinningSphere/>
                             <Carousel visibleItems={3} gap={30}>
-                                <Link to="/works/car-trunks" className="works_item">
+                                <Link to="/works/onsint" className="works_item">
                                     <div className="works_image">
-                                        <img src="/images/Portfolio_car-trunks.png"/>
+                                        <img src="/images/Portfolio_onsint.png"/>
                                     </div>
                                     <div className="works_description">
-                                        <div className="works_name">Car trunks</div>
+                                        <div className="works_name">Onsint</div>
                                         <div className="works_tags">
-                                            <div className="works_tag">Wordpress</div>
-                                            <div className="works_tag">WooCommerce</div>
+                                            <div className="works_tag">jQuery</div>
+                                            <div className="works_tag">CMS layout</div>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to="/works/klatzhaus" className="works_item">
+                                    <div className="works_image">
+                                        <img src="/images/Portfolio_klatzhaus.png"/>
+                                    </div>
+                                    <div className="works_description">
+                                        <div className="works_name">Klatzhaus</div>
+                                        <div className="works_tags">
+                                            <div className="works_tag">BEM</div>
+                                            <div className="works_tag">Animated</div>
                                         </div>
                                     </div>
                                 </Link>
@@ -199,6 +211,18 @@ const HomePage = () => {
                                         </div>
                                     </div>
                                 </Link>
+                                <Link to="/works/car-trunks" className="works_item">
+                                    <div className="works_image">
+                                        <img src="/images/Portfolio_car-trunks.png"/>
+                                    </div>
+                                    <div className="works_description">
+                                        <div className="works_name">Car trunks</div>
+                                        <div className="works_tags">
+                                            <div className="works_tag">Wordpress</div>
+                                            <div className="works_tag">WooCommerce</div>
+                                        </div>
+                                    </div>
+                                </Link>
                                 <Link to="/works/artmir" className="works_item">
                                     <div className="works_image">
                                         <img src="/images/Portfolio_artmir.png" alt="Artmir"/>
@@ -218,56 +242,8 @@ const HomePage = () => {
                                     <div className="works_description">
                                         <div className="works_name">Fastening solutions</div>
                                         <div className="works_tags">
-                                            <div className="works_tag">Wordpress</div>
-                                            <div className="works_tag">Wordpress</div>
-                                        </div>
-                                    </div>
-                                </Link>
-                                <Link to="/works/klatzhaus" className="works_item">
-                                    <div className="works_image">
-                                        <img src="/images/Portfolio_klatzhaus.png"/>
-                                    </div>
-                                    <div className="works_description">
-                                        <div className="works_name">Klatzhaus</div>
-                                        <div className="works_tags">
-                                            <div className="works_tag">Wordpress</div>
-                                            <div className="works_tag">Wordpress</div>
-                                        </div>
-                                    </div>
-                                </Link>
-                                <Link to="/works/onsint" className="works_item">
-                                    <div className="works_image">
-                                        <img src="/images/Portfolio_onsint.png"/>
-                                    </div>
-                                    <div className="works_description">
-                                        <div className="works_name">Onsint</div>
-                                        <div className="works_tags">
-                                            <div className="works_tag">Wordpress</div>
-                                            <div className="works_tag">Wordpress</div>
-                                        </div>
-                                    </div>
-                                </Link>
-                                <Link to="/works/cards-vest" className="works_item">
-                                    <div className="works_image">
-                                        <img src="/images/Portfolio_cards-vest.png"/>
-                                    </div>
-                                    <div className="works_description">
-                                        <div className="works_name">Cards vest</div>
-                                        <div className="works_tags">
-                                            <div className="works_tag">Wordpress</div>
-                                            <div className="works_tag">Wordpress</div>
-                                        </div>
-                                    </div>
-                                </Link>
-                                <Link to="/works/bionica-alania" className="works_item">
-                                    <div className="works_image">
-                                        <img src="/images/Portfolio_bionica-alania.png"/>
-                                    </div>
-                                    <div className="works_description">
-                                        <div className="works_name">Bionica Alania</div>
-                                        <div className="works_tags">
-                                            <div className="works_tag">Wordpress</div>
-                                            <div className="works_tag">Wordpress</div>
+                                            <div className="works_tag">BEM</div>
+                                            <div className="works_tag">CMS layout</div>
                                         </div>
                                     </div>
                                 </Link>
@@ -279,7 +255,30 @@ const HomePage = () => {
                                         <div className="works_name">Stav group</div>
                                         <div className="works_tags">
                                             <div className="works_tag">Wordpress</div>
+                                            <div className="works_tag">Woocommerce</div>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to="/works/cards-vest" className="works_item">
+                                    <div className="works_image">
+                                        <img src="/images/Portfolio_cards-vest.png"/>
+                                    </div>
+                                    <div className="works_description">
+                                        <div className="works_name">Cards vest</div>
+                                        <div className="works_tags">
+                                            <div className="works_tag">Bootstrap</div>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to="/works/bionica-alania" className="works_item">
+                                    <div className="works_image">
+                                        <img src="/images/Portfolio_bionica-alania.png"/>
+                                    </div>
+                                    <div className="works_description">
+                                        <div className="works_name">Bionica Alania</div>
+                                        <div className="works_tags">
                                             <div className="works_tag">Wordpress</div>
+                                            <div className="works_tag">Woocommerce</div>
                                         </div>
                                     </div>
                                 </Link>
