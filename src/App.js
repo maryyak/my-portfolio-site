@@ -7,9 +7,15 @@ import AppRouter from "./components/AppRouter";
 import Navbar from "./components/UI/Navbar/Navbar";
 import CustomCursor from "./components/UI/CustomCursor/CustomCursor";
 import Loader from "./components/UI/Loader/Loader";
+import { useTranslation } from 'react-i18next';
 
 function App() {
     const {loading, completeAnimation} = usePageLoading();
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
 
     return (
         <BrowserRouter>
@@ -17,7 +23,7 @@ function App() {
                 <Loader completeAnimation={completeAnimation}/>
             ) : (
                 <>
-                    <Navbar/>
+                    <Navbar changeLanguage={changeLanguage}/>
                     <CustomCursor/>
                     <ScrollRestoration />
                     <AppRouter/>

@@ -31,6 +31,10 @@ h1 {
     color: white;
 }
 
+h1.dark{
+    color: #180E49;
+}
+
 img {
     width: 100%;
 }
@@ -142,7 +146,7 @@ a:hover{
     border-radius: 50%;
 }
 
-.container__mainBanner {
+.container_mainBanner {
     align-items: flex-start;
 }
 
@@ -234,7 +238,7 @@ a:hover{
     align-items: center;
 }
 
-.container__works {
+.container_works {
     justify-content: space-evenly;
 }
 
@@ -471,4 +475,335 @@ a:hover{
     font-size: 50px;
     color: var(--text-color);
     font-weight: 700;
+}
+
+.price{
+    width: 100%;
+    background: linear-gradient(180deg, #84ffff 0%, #d3c4ee 77.18%, #f8bbd0 100%);
+    border-radius: 40px;
+    box-shadow: 0 0 30px rgba(132, 255, 255, 0.5),
+    0 0 60px rgba(132, 255, 255, 0.3),
+    0 0 100px rgba(132, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.price-table__bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+.price-table__th, .price-table__td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 2px dashed #180E49;
+}
+
+.price-table__th {
+    font-weight: bold;
+    color: #180E49;
+}
+
+.price-table__td {
+    text-align: right;
+    color: #180E49;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.pricing-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card__bg{
+    transform: translateY(-100%);
+    width: 100%;
+    transition: transform 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: url("/public/images/Price_card-background.png") no-repeat;
+    background-size: 100% 100%;
+    height: 122px;
+}
+
+.pricing-card:hover .pricing-card__bg{
+    transform: translateY(0);
+}
+
+.pricing-card__title {
+    font-size: 24px;
+    color: #180E49;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    transition: color 0.5s ease;
+}
+
+.pricing-card__price {
+    font-size: 21px;
+    color: #180E49;
+    margin-bottom: 35px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    transition: color 0.5s ease;
+}
+
+.pricing-card:hover .pricing-card__price, .pricing-card:hover .pricing-card__title{
+    color: white;
+}
+
+.pricing-card__features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.pricing-card__features li {
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #180E49;
+    padding-bottom: 5px;
+    color: #180E49;
+}
+
+
+.pricing-card__button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(248, 187, 208, 0.3);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pricing-card__button:hover {
+    background: rgba(248, 187, 208, 0.5);
+    color: #180E49;
+}
+
+.price__subheading{
+    font-size: 30px;
+    font-weight: 600;
+    color: #180E49;
+}
+
+.price-additions{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.links{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container_links{
+    gap: 30px;
+}
+
+.links__card{
+    position: relative;
+    display: block;
+}
+
+.links__card_github{
+    width: 300px;
+    height: 300px;
+}
+
+.links__card_tg{
+    width: 350px;
+    height: 350px;
+    margin-left: 140px;
+    margin-top: -75px;
+}
+
+.links__card_email{
+    width: 180px;
+    height: 180px;
+    margin-top: -70px;
+}
+
+.links__card-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.links__card_github .links__card-img{
+    width: 100px;
+    height: 100px;
+}
+
+.links__card_tg .links__card-img{
+    width: 120px;
+    height: 120px;
+}
+
+.links__card_tg .links__card-bg{
+    transform: rotate(114deg);
+}
+
+.links__card_email .links__card-img{
+    width: 80px;
+    height: 80px;
+}
+
+.links-row{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.links__cards, .links-form{
+    width: 100%;
+}
+
+.links__background{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.links__card:hover .links__card-bg{
+    transition: transform 0.5s ease;
+    transform: rotate(200deg);
+}
+
+.links-form{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 55px;
+    border: 1px solid rgba(245, 247, 250, 0.06);
+    border-radius: 40px;
+    backdrop-filter: blur(109px);
+    box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
+    background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0) 100%);
+}
+
+.links-form__heading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.links-form__field{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.links-form__input{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.links-form__input::placeholder{
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.links-form__label{
+    font-size: 20px;
+}
+
+.links-form__input_comment{
+    min-height: 120px;
+}
+
+.links-form__submit{
+    width: fit-content;
+    align-self: center;
+    padding: 10px 50px;
+    border-radius: 20px;
+    border: 2px solid white;
+    position: relative;
+    overflow: hidden;
+}
+
+.links-form__submit-input{
+    font-size: 20px;
+    background: none;
+    color: white;
+    border: none;
+    font-weight: 500;
+    transition: color 0.5s ease;
+}
+
+.links-form__submit::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 310%;
+    background: linear-gradient(135deg, rgba(209, 196, 233, 0.7) 0%, rgba(209, 196, 233, 0.4) 52.14%, rgba(209, 196, 233, 0.1) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(-45deg) translate(0, -125%);
+    transition: transform 0.5s ease;
+}
+
+.links-form__submit:hover::after{
+    transform: rotate(-45deg) translate(15%, -23%);
+}
+
+.links-form__submit:hover .links-form__submit-input{
+    color: #180E49;
+}
+
+.rights{
+    color: #D1C4E9;
+    text-align: center;
 }

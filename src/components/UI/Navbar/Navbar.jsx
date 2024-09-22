@@ -20,11 +20,11 @@ const NavbarContent = () => {
                 <div className={`${styles.navbarLink} cursorPointer`}>Works</div>
             </AnchorScroll>
             <div className={styles.separator}></div>
-            <AnchorScroll to="#">
+            <AnchorScroll to="#price">
                 <div className={`${styles.navbarLink} cursorPointer`}>Price</div>
             </AnchorScroll>
             <div className={styles.separator}></div>
-            <AnchorScroll to="#">
+            <AnchorScroll to="#links">
                 <div className={`${styles.navbarLink} cursorPointer`}>Links</div>
             </AnchorScroll>
         </>
@@ -44,7 +44,7 @@ const getPageHeight = () => {
     return pageHeight;
 };
 
-const Navbar = () => {
+const Navbar = ({ changeLanguage }) => {
     const [scrolledHeight, setScrolledHeight] = useState(0);
     const navbarRef = useRef(null);
 
@@ -61,6 +61,10 @@ const Navbar = () => {
         <div className={styles.navbarWrapper}
              ref={navbarRef}>
             <div className={`${styles.navbar} ${styles.navbarUnscrolled}`}>
+                <div className={`${styles.langButtons} cursorPointer`}>
+                    <button className={styles.langButton} onClick={() => changeLanguage('en')}>EN</button>
+                    <button className={styles.langButton} onClick={() => changeLanguage('ru')}>RU</button>
+                </div>
                 <NavbarContent/>
             </div>
             <div className={styles.navbarBackground}
@@ -69,6 +73,10 @@ const Navbar = () => {
                  style={{height: `${scrolledHeight}px`}}
             >
                 <div className={`${styles.navbar} ${styles.navbarScrolled}`}>
+                    <div className={`${styles.langButtons} cursorPointer`}>
+                        <button className={styles.langButton} onClick={() => changeLanguage('en')}>EN</button>
+                        <button className={styles.langButton} onClick={() => changeLanguage('ru')}>RU</button>
+                    </div>
                     <NavbarContent/>
                 </div>
             </div>

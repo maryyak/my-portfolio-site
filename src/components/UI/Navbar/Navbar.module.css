@@ -72,3 +72,27 @@
     font-weight: bold;
     transition: color 0.4s ease-in-out, font-weight 0.4s ease-in-out;
 }
+
+.langButtons{
+    border: 1px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.langButton{
+    border: none;
+    background: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.langButton:hover{
+    color: var(--hover-color);
+    font-weight: bold;
+    transition: color 0.4s ease-in-out, font-weight 0.4s ease-in-out;
+}
+
+.langButton:nth-child(1){
+    border-right: 1px solid white;
+}
