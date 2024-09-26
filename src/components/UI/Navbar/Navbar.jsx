@@ -1,31 +1,34 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styles from './Navbar.module.css';
 import AnchorScroll from "../../AnchorScroll";
+import {useTranslation} from "react-i18next";
 
 const NavbarContent = () => {
+    const {t} = useTranslation();
+
     return (
         <>
             <AnchorScroll to="#main">
                 <div className="logo logo__navbar cursorPointer">maryyak</div>
             </AnchorScroll>
             <AnchorScroll to="#about">
-                <div className={`${styles.navbarLink} cursorPointer`}>About</div>
+                <div className={`${styles.navbarLink} cursorPointer`}>{t('about')}</div>
             </AnchorScroll>
             <div className={styles.separator}></div>
             <AnchorScroll to="#stack">
-                <div className={`${styles.navbarLink} cursorPointer`}>Stack</div>
+                <div className={`${styles.navbarLink} cursorPointer`}>{t('stack')}</div>
             </AnchorScroll>
             <div className={styles.separator}></div>
             <AnchorScroll to="#works">
-                <div className={`${styles.navbarLink} cursorPointer`}>Works</div>
+                <div className={`${styles.navbarLink} cursorPointer`}>{t('works')}</div>
             </AnchorScroll>
             <div className={styles.separator}></div>
             <AnchorScroll to="#price">
-                <div className={`${styles.navbarLink} cursorPointer`}>Price</div>
+                <div className={`${styles.navbarLink} cursorPointer`}>{t('price')}</div>
             </AnchorScroll>
             <div className={styles.separator}></div>
             <AnchorScroll to="#links">
-                <div className={`${styles.navbarLink} cursorPointer`}>Links</div>
+                <div className={`${styles.navbarLink} cursorPointer`}>{t('links')}</div>
             </AnchorScroll>
         </>
     )

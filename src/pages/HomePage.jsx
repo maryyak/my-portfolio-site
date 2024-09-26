@@ -49,21 +49,10 @@ const HomePage = () => {
                 <div className="about">
                     <div className="textBlock">
                         <h1>
-                            <DroppingText text={'ABOUT'}/>
+                            <DroppingText text={t('about')}/>
                         </h1>
                         <AppearElement from={"bottom"}>
-                            <div className="text">Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Nulla
-                                maximus
-                                maximus massa, et rutrum leo vestibulum ac. Ut et malesuada neque. Nam ornare
-                                purus
-                                id
-                                magna ultricies efficitur. Fusce lobortis est sed augue sodales lobortis.
-                                Integer ut
-                                ligula lectus. Etiam gravida ante a nulla ultrices vehicula. Fusce tempus varius
-                                odio,
-                                vitae posuere ipsum maximus vel. In eget tincidunt eros, quis rhoncus risus.
-                            </div>
+                            <div className="text">{t('about-text')}</div>
                         </AppearElement>
                     </div>
                     <AppearElement from={"right"}>
@@ -79,13 +68,13 @@ const HomePage = () => {
             <div id="stack" className="container">
                 <div className="stack">
                     <div className="backgroundHeading">
-                        <DroppingText text={'MY STACK'}/>
+                        <DroppingText text={t('my-stack')}/>
                     </div>
                     <AppearElement from={"left"}>
                         <div className="stack_list">
                             <div className="stack_row">
                                 <div className="stack_element">
-                                    <div className="stack_heading">Languages</div>
+                                    <div className="stack_heading">{t('languages')}</div>
                                     <div className="stack_ul">
                                         <div className="stack_li">HTML</div>
                                         <div className="stack_li">CSS</div>
@@ -96,7 +85,7 @@ const HomePage = () => {
                                     </div>
                                 </div>
                                 <div className="stack_element">
-                                    <div className="stack_heading">Website Builders</div>
+                                    <div className="stack_heading">{t('website-builders')}</div>
                                     <div className="stack_ul">
                                         <div className="stack_li">Wordpress</div>
                                         <div className="stack_li">Tilda</div>
@@ -105,7 +94,7 @@ const HomePage = () => {
                             </div>
                             <div className="stack_row">
                                 <div className="stack_element">
-                                    <div className="stack_heading">Libraries and Tools</div>
+                                    <div className="stack_heading">{t('libraries-tools')}</div>
                                     <div className="stack_ul">
                                         <div className="stack_li">React</div>
                                         <div className="stack_li">Three.js</div>
@@ -114,7 +103,7 @@ const HomePage = () => {
                                     </div>
                                 </div>
                                 <div className="stack_element">
-                                    <div className="stack_heading">Miscellaneous</div>
+                                    <div className="stack_heading">{t('miscellaneous')}</div>
                                     <div className="stack_row">
                                         <div className="stack_ul">
                                             <div className="stack_li">SQLite</div>
@@ -146,15 +135,10 @@ const HomePage = () => {
                 <div className="container container_works">
                     <div className="combined-heading">
                         <h1>
-                            <DroppingText text={'WORKS'}/>
+                            <DroppingText text={t('works')}/>
                         </h1>
                         <AppearElement from={"right"}>
-                            <div className="text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
+                            <div className="text">{t('works-text')}</div>
                         </AppearElement>
                     </div>
                     <AppearElement from={"bottom"}>
@@ -169,7 +153,7 @@ const HomePage = () => {
                                         <div className="works_name">Onsint</div>
                                         <div className="works_tags">
                                             <div className="works_tag">jQuery</div>
-                                            <div className="works_tag">CMS layout</div>
+                                            <div className="works_tag">{t('cms-layout')}</div>
                                         </div>
                                     </div>
                                 </Link>
@@ -181,7 +165,7 @@ const HomePage = () => {
                                         <div className="works_name">Klatzhaus</div>
                                         <div className="works_tags">
                                             <div className="works_tag">BEM</div>
-                                            <div className="works_tag">Animated</div>
+                                            <div className="works_tag">{t('animated')}</div>
                                         </div>
                                     </div>
                                 </Link>
@@ -192,7 +176,7 @@ const HomePage = () => {
                                     <div className="works_description">
                                         <div className="works_name">Standart moving</div>
                                         <div className="works_tags">
-                                            <div className="works_tag">Landing page</div>
+                                            <div className="works_tag">{t('landing')}</div>
                                         </div>
                                     </div>
                                 </Link>
@@ -204,7 +188,7 @@ const HomePage = () => {
                                         <div className="works_name">Artel project</div>
                                         <div className="works_tags">
                                             <div className="works_tag">BEM</div>
-                                            <div className="works_tag">Animated</div>
+                                            <div className="works_tag">{t('animated')}</div>
                                         </div>
                                     </div>
                                 </Link>
@@ -240,7 +224,7 @@ const HomePage = () => {
                                         <div className="works_name">Fastening solutions</div>
                                         <div className="works_tags">
                                             <div className="works_tag">BEM</div>
-                                            <div className="works_tag">CMS layout</div>
+                                            <div className="works_tag">{t('cms-layout')}</div>
                                         </div>
                                     </div>
                                 </Link>
@@ -287,67 +271,79 @@ const HomePage = () => {
             <div id="price" className="container">
                 <div className="price">
                     <h1 className="dark">
-                        <DroppingText text={'PRICE'}/>
+                        <DroppingText text={t('price')}/>
                     </h1>
                     <AppearElement from={"bottom"}>
                         <div className="pricing-cards">
                             <div className="pricing-card">
-                                <div className="pricing-card__bg"></div>
-                                <h3 className="pricing-card__title">Landing Page</h3>
-                                <p className="pricing-card__price">from 2000 rub</p>
-                                <ul className="pricing-card__features">
-                                    <li>Responsive Design</li>
-                                    <li>Custom Animations</li>
-                                    <li>High Performance</li>
-                                </ul>
-                                <AnchorScroll to="#links">
-                                    <div className="pricing-card__button">Get Started</div>
-                                </AnchorScroll>
+                                <div className="pricing-card__info">
+                                    <div className="pricing-card__bg"></div>
+                                    <h3 className="pricing-card__title">{t('landing')}</h3>
+                                    <p className="pricing-card__price">{t('from')} 2000 {t('rub')}</p>
+                                </div>
+                                <div className="pricing-card__bottom">
+                                    <ul className="pricing-card__features">
+                                        <li>{t('responsive-design')}</li>
+                                        <li>{t('custom-animations')}</li>
+                                        <li>{t('high-performance')}</li>
+                                    </ul>
+                                    <AnchorScroll to="#links">
+                                        <div className="pricing-card__button">{t('get-started')}</div>
+                                    </AnchorScroll>
+                                </div>
                             </div>
                             <div className="pricing-card">
-                                <div className="pricing-card__bg"></div>
-                                <h3 className="pricing-card__title">Static multi-page site</h3>
-                                <p className="pricing-card__price">from 3000 rub</p>
-                                <ul className="pricing-card__features">
-                                    <li>Clean layout</li>
-                                    <li>Ready for CMS integration</li>
-                                    <li>Fast Delivery</li>
-                                </ul>
-                                <AnchorScroll to="#links">
-                                    <div className="pricing-card__button">Get Started</div>
-                                </AnchorScroll>
+                                <div className="pricing-card__info">
+                                    <div className="pricing-card__bg"></div>
+                                    <h3 className="pricing-card__title">{t('multi-page')}</h3>
+                                    <p className="pricing-card__price">{t('from')} 3000 {t('rub')}</p>
+                                </div>
+                                <div className="pricing-card__bottom">
+                                    <ul className="pricing-card__features">
+                                        <li>{t('structured-project')}</li>
+                                        <li>{t('cms-integration')}</li>
+                                        <li>{t('fast-processing')}</li>
+                                    </ul>
+                                    <AnchorScroll to="#links">
+                                        <div className="pricing-card__button">{t('get-started')}</div>
+                                    </AnchorScroll>
+                                </div>
                             </div>
                             <div className="pricing-card">
-                                <div className="pricing-card__bg"></div>
-                                <h3 className="pricing-card__title">Web-application</h3>
-                                <p className="pricing-card__price">from 5000 rub</p>
-                                <ul className="pricing-card__features">
-                                    <li>Fast Data Extraction</li>
-                                    <li>Customizable</li>
-                                    <li>Scalable</li>
-                                </ul>
-                                <AnchorScroll to="#links">
-                                    <div className="pricing-card__button">Get Started</div>
-                                </AnchorScroll>
+                                <div className="pricing-card__info">
+                                    <div className="pricing-card__bg"></div>
+                                    <h3 className="pricing-card__title">{t('web-application')}</h3>
+                                    <p className="pricing-card__price">{t('from')} 5000 {t('rub')}</p>
+                                </div>
+                                <div className="pricing-card__bottom">
+                                    <ul className="pricing-card__features">
+                                        <li>{t('cross-platform')}</li>
+                                        <li>{t('customizable')}</li>
+                                        <li>{t('scalable')}</li>
+                                    </ul>
+                                    <AnchorScroll to="#links">
+                                        <div className="pricing-card__button">{t('get-started')}</div>
+                                    </AnchorScroll>
+                                </div>
                             </div>
                         </div>
                     </AppearElement>
                     <AppearElement from={"bottom"}>
                         <div className="price-additions">
-                            <div className="price__subheading">Additions</div>
+                            <div className="price__subheading">{t('additions')}</div>
                             <table className="price-table">
                                 <tbody>
                                 <tr className="price-table__tr">
-                                    <th className="price-table__th">Uploading to hosting</th>
-                                    <td className="price-table__td">from 500 rub</td>
+                                    <th className="price-table__th">{t('uploading-hosting')}</th>
+                                    <td className="price-table__td">{t('from')} 500 {t('rub')}</td>
                                 </tr>
                                 <tr className="price-table__tr">
-                                    <th className="price-table__th">CMS implementation</th>
-                                    <td className="price-table__td">from 2000 rub</td>
+                                    <th className="price-table__th">{t('cms-implementation')}</th>
+                                    <td className="price-table__td">{t('from')} 2000 {t('rub')}</td>
                                 </tr>
                                 <tr className="price-table__tr">
-                                    <th className="price-table__th">Using additional libraries</th>
-                                    <td className="price-table__td">from 1000 rub</td>
+                                    <th className="price-table__th">{t('additional-libraries')}</th>
+                                    <td className="price-table__td">{t('from')} 1000 {t('rub')}</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -365,7 +361,7 @@ const HomePage = () => {
                 </div>
                 <div className="container container_links">
                     <h1>
-                        <DroppingText text={'LINKS'}/>
+                        <DroppingText text={t('links')}/>
                     </h1>
                     <div className="links-row">
                         <div className="links__cards">
@@ -497,26 +493,24 @@ const HomePage = () => {
                             </a>
                         </div>
                         <form className="links-form">
-                            <div className="links-form__heading">Leave your contacts and I will get back to you</div>
+                            <div className="links-form__heading">{t('links__heading')}</div>
                             <div className="links-form__field">
-                                <label htmlFor="name" className="links-form__label">How may I address you?</label>
+                                <label htmlFor="name" className="links-form__label">{t('links__name-head')}</label>
                                 <input id="name" type="text" required className="links-form__input"
-                                       placeholder="Your name"/>
+                                       placeholder={t('links__name')}/>
                             </div>
                             <div className="links-form__field">
-                                <label htmlFor="contact" className="links-form__label">Leave your contact<br/> (email,
-                                    telegram or phone)</label>
+                                <label htmlFor="contact" className="links-form__label">{t('links__contact-head')}</label>
                                 <input id="contact" type="text" required className="links-form__input"
-                                       placeholder="Your contact"/>
+                                       placeholder={t('links__contact')}/>
                             </div>
                             <div className="links-form__field">
-                                <label htmlFor="describe" className="links-form__label">Describe the website you
-                                    need</label>
+                                <label htmlFor="describe" className="links-form__label">{t('links__describe-head')}</label>
                                 <textarea id="describe" className="links-form__input links-form__input_comment"
-                                          placeholder="Your name"/>
+                                          placeholder={t('links__describe')}/>
                             </div>
                             <div className="links-form__submit cursorPointer">
-                                <input type="submit" className="links-form__submit-input" value="Submit"/>
+                                <input type="submit" className="links-form__submit-input" value={t('submit')}/>
                             </div>
                         </form>
                     </div>

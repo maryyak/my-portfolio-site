@@ -31,7 +31,7 @@ h1 {
     color: white;
 }
 
-h1.dark{
+h1.dark {
     color: #180E49;
 }
 
@@ -39,12 +39,12 @@ img {
     width: 100%;
 }
 
-a{
+a {
     color: var(--text-color);
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: var(--hover-color);
 }
 
@@ -408,20 +408,20 @@ a:hover{
     font-size: 20px;
 }
 
-.works-button_center{
+.works-button_center {
     align-self: center;
 }
 
-.works-button.hidden{
+.works-button.hidden {
     display: none;
 }
 
-.works-button .arrow{
+.works-button .arrow {
     stroke: #D1C4E9;
     transition: transform 0.5s ease, d 0.5s ease;
 }
 
-.works-button .dot{
+.works-button .dot {
     transition: transform 0.5s ease;
     fill: #D1C4E9;
 }
@@ -432,7 +432,7 @@ a:hover{
     d: path("M45 25 L0 25 L13 10 M0 25 L13 40");
 }
 
-.works-button:hover .dot{
+.works-button:hover .dot {
     fill: var(--hover-color);
 }
 
@@ -458,26 +458,26 @@ a:hover{
     transform: translateX(0);
 }
 
-.works-button:hover{
+.works-button:hover {
     color: var(--hover-color);
     border: 2px solid var(--hover-color);
 }
 
-.works-button_back .works-button__text{
+.works-button_back .works-button__text {
     transition: transform 0.5s ease;
 }
 
-.works-button_back:hover .works-button__text{
+.works-button_back:hover .works-button__text {
     transform: translateX(-20px);
 }
 
-.error-text{
+.error-text {
     font-size: 50px;
     color: var(--text-color);
     font-weight: 700;
 }
 
-.price{
+.price {
     width: 100%;
     background: linear-gradient(180deg, #84ffff 0%, #d3c4ee 77.18%, #f8bbd0 100%);
     border-radius: 40px;
@@ -492,7 +492,7 @@ a:hover{
     gap: 30px;
 }
 
-.price-table__bg{
+.price-table__bg {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -540,6 +540,9 @@ a:hover{
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.3);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .pricing-card:hover {
@@ -547,9 +550,8 @@ a:hover{
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-.pricing-card__bg{
+.pricing-card__bg {
     transform: translateY(-100%);
-    width: 100%;
     transition: transform 0.5s ease;
     position: absolute;
     top: 0;
@@ -557,10 +559,12 @@ a:hover{
     z-index: -1;
     background: url("/public/images/Price_card-background.png") no-repeat;
     background-size: 100% 100%;
-    height: 122px;
+    width: calc(100% + 60px);
+    height: calc(100% + 30px);
+    margin: -30px -30px 0 -30px;
 }
 
-.pricing-card:hover .pricing-card__bg{
+.pricing-card:hover .pricing-card__bg {
     transform: translateY(0);
 }
 
@@ -580,7 +584,7 @@ a:hover{
     transition: color 0.5s ease;
 }
 
-.pricing-card:hover .pricing-card__price, .pricing-card:hover .pricing-card__title{
+.pricing-card:hover .pricing-card__price, .pricing-card:hover .pricing-card__title {
     color: white;
 }
 
@@ -588,6 +592,10 @@ a:hover{
     list-style: none;
     padding: 0;
     margin: 20px 0;
+}
+
+.pricing-card__info {
+    position: relative;
 }
 
 .pricing-card__features li {
@@ -616,13 +624,13 @@ a:hover{
     color: #180E49;
 }
 
-.price__subheading{
+.price__subheading {
     font-size: 30px;
     font-weight: 600;
     color: #180E49;
 }
 
-.price-additions{
+.price-additions {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -633,7 +641,7 @@ a:hover{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.links{
+.links {
     position: relative;
     width: 100%;
     display: flex;
@@ -643,81 +651,81 @@ a:hover{
     overflow: hidden;
 }
 
-.container_links{
+.container_links {
     gap: 30px;
 }
 
-.links__card{
+.links__card {
     position: relative;
     display: block;
 }
 
-.links__card_github{
+.links__card_github {
     width: 300px;
     height: 300px;
 }
 
-.links__card_tg{
+.links__card_tg {
     width: 350px;
     height: 350px;
     margin-left: 140px;
     margin-top: -75px;
 }
 
-.links__card_email{
+.links__card_email {
     width: 180px;
     height: 180px;
     margin-top: -70px;
 }
 
-.links__card-img{
+.links__card-img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.links__card_github .links__card-img{
+.links__card_github .links__card-img {
     width: 100px;
     height: 100px;
 }
 
-.links__card_tg .links__card-img{
+.links__card_tg .links__card-img {
     width: 120px;
     height: 120px;
 }
 
-.links__card_tg .links__card-bg{
+.links__card_tg .links__card-bg {
     transform: rotate(114deg);
 }
 
-.links__card_email .links__card-img{
+.links__card_email .links__card-img {
     width: 80px;
     height: 80px;
 }
 
-.links-row{
+.links-row {
     display: flex;
     flex-direction: row;
     gap: 100px;
 }
 
-.links__cards, .links-form{
+.links__cards, .links-form {
     width: 100%;
 }
 
-.links__background{
+.links__background {
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.links__card:hover .links__card-bg{
+.links__card:hover .links__card-bg {
     transition: transform 0.5s ease;
     transform: rotate(200deg);
 }
 
-.links-form{
+.links-form {
     gap: 30px;
     display: flex;
     flex-direction: column;
@@ -730,39 +738,39 @@ a:hover{
     background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0) 100%);
 }
 
-.links-form__heading{
+.links-form__heading {
     font-size: 30px;
     text-align: center;
     font-weight: 600;
 }
 
-.links-form__field{
+.links-form__field {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.links-form__input{
+.links-form__input {
     padding: 10px;
     border-radius: 10px;
     font-size: 15px;
     font-family: "Montserrat", sans-serif;
 }
 
-.links-form__input::placeholder{
+.links-form__input::placeholder {
     font-size: 15px;
     font-family: "Montserrat", sans-serif;
 }
 
-.links-form__label{
+.links-form__label {
     font-size: 20px;
 }
 
-.links-form__input_comment{
+.links-form__input_comment {
     min-height: 120px;
 }
 
-.links-form__submit{
+.links-form__submit {
     width: fit-content;
     align-self: center;
     padding: 10px 50px;
@@ -772,20 +780,21 @@ a:hover{
     overflow: hidden;
 }
 
-.links-form__submit-input{
+.links-form__submit-input {
     font-size: 20px;
     background: none;
     color: white;
     border: none;
     font-weight: 500;
     transition: color 0.5s ease;
+    width: 100px;
 }
 
-.links-form__submit::after{
+.links-form__submit::after {
     content: "";
     display: block;
     width: 100%;
-    height: 310%;
+    height: 170px;
     background: linear-gradient(135deg, rgba(209, 196, 233, 0.7) 0%, rgba(209, 196, 233, 0.4) 52.14%, rgba(209, 196, 233, 0.1) 100%);
     position: absolute;
     top: 0;
@@ -795,15 +804,15 @@ a:hover{
     transition: transform 0.5s ease;
 }
 
-.links-form__submit:hover::after{
+.links-form__submit:hover::after {
     transform: rotate(-45deg) translate(15%, -23%);
 }
 
-.links-form__submit:hover .links-form__submit-input{
+.links-form__submit:hover .links-form__submit-input {
     color: #180E49;
 }
 
-.rights{
+.rights {
     color: #D1C4E9;
     text-align: center;
 }

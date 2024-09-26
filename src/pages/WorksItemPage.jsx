@@ -3,10 +3,12 @@ import {useParams, useNavigate, Link} from 'react-router-dom';
 import DroppingText from "../components/UI/DroppingText/DroppingText";
 import Magnifier from "../components/UI/Magnifier/Magnifier";
 import worksData from '../data/worksData';
+import {useTranslation} from "react-i18next";
 
 const WorksItemPage = () => {
     const {id} = useParams();
     const navigate = useNavigate();
+    const {t} = useTranslation();
     const item = worksData[id];
 
     if (!item) {
@@ -113,7 +115,7 @@ const WorksItemPage = () => {
                         </g>
                     </svg>
                     <div className="works-button__text">
-                        Go Back
+                        {t('go-back')}
                     </div>
                 </div>
                 <h1>
@@ -142,8 +144,7 @@ const WorksItemPage = () => {
                     </div>
                 </div>
                 <div className={`works-button works-button_center cursorPointer ${item.link === 'none' ? 'hidden' : ''}`}>
-                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="works-button__text">View
-                        More</a>
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="works-button__text">{t('view-more')}</a>
                 </div>
             </div>
         </div>
