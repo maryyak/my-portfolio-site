@@ -2,9 +2,9 @@ import React, {useEffect, useRef} from 'react';
 import styles from './AppearElement.module.css'
 import useObserver from "../../../hooks/useObserver";
 
-const AppearElement = ({from, children}) => {
+const AppearElement = ({from, children, id}) => {
     const containerRef = useRef(null);
-    useObserver({containerRef: containerRef, classToAdd: "animate", stylesheet: styles});
+    useObserver({containerRef: containerRef, classToAdd: "animate", stylesheet: styles, id: id});
 
     const existingClasses = children.props.className || '';
 

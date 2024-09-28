@@ -9,6 +9,8 @@ const usePageLoading = () => {
     const [completeAnimation, setCompleteAnimation] = useState(false);
 
     useEffect(() => {
+        localStorage.clear();
+
         const loadFonts = async () => {
             try {
                 const fontIglets = new FontFace('Iglets', `url(${igletsFont})`);

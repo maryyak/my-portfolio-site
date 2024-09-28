@@ -1,18 +1,23 @@
 import React, {useEffect} from 'react';
 
-const UseObserver = ({containerRef, classToAdd, stylesheet}) => {
+const UseObserver = ({containerRef, classToAdd, stylesheet, id}) => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     containerRef.current.classList.add(stylesheet[classToAdd]);
+                    localStorage.setItem(`animated-${id}`, 'true')
                 }
             });
         }, { threshold: 0.2 });
 
         const currentRef = containerRef.current;
-        if (currentRef) {
+        const isAnimated = localStorage.getItem(`animated-${id}`);
+        if (currentRef && !isAnimated) {
             observer.observe(currentRef);
+        } else {
+            containerRef.current.classList.add(stylesheet[classToAdd]);
+            return;
         }
 
         return () => {

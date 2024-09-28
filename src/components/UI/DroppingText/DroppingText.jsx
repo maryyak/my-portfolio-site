@@ -11,7 +11,7 @@ const DEFAULT_OPTIONS = {
     wordAngleRange: [-3, 3]
 };
 
-const DroppingText = ({options = DEFAULT_OPTIONS, text}) => {
+const DroppingText = ({options = DEFAULT_OPTIONS, text, id}) => {
     const containerRef = useRef(null);
 
     const injectSVGFilter = () => {
@@ -46,7 +46,7 @@ const DroppingText = ({options = DEFAULT_OPTIONS, text}) => {
         addDelayToEachLetter();
     })
 
-    useObserver({containerRef: containerRef, classToAdd: "canvas--animated", stylesheet: styles});
+    useObserver({containerRef: containerRef, classToAdd: "canvas--animated", stylesheet: styles, id: id});
 
     return (
         <div className={styles.canvas} ref={containerRef}>
