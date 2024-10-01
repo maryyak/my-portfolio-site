@@ -5,6 +5,8 @@ import {useTranslation} from "react-i18next";
 
 const ContactForm = () => {
     const {t} = useTranslation();
+    const [hideSuccess, setHideSuccess] = useState(true);
+    const [hideFail, setHideFail] = useState(true);
     const [formData, setFormData] = useState({
         name: '',
         contact: '',
@@ -19,15 +21,14 @@ const ContactForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Отправка формы через EmailJS
         emailjs.send('service_qwsq4ye', 'template_3jnm90i', formData, 'XexHPSdL26BivfwV8')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
-                alert('Сообщение отправлено!');
+                setHideSuccess(false);
             })
             .catch((error) => {
                 console.log('FAILED...', error);
-                alert('Ошибка отправки!');
+                setHideFail(false);
             });
     };
 
@@ -49,9 +50,15 @@ const ContactForm = () => {
                 <textarea id="message" name="message" className={`${styles.input} ${styles.input_comment}`}
                           placeholder={t('links__describe')} value={formData.message} onChange={handleChange}/>
             </div>
-            <div className={`${styles.submit} cursorPointer`}>
+            <div className={`${styles.submit} cursorPointer ${(hideSuccess && hideFail) ? "" : styles.hidden}`}>
                 <input type="submit" className={styles.submitInput} value={t('submit')}/>
             </div>
+            <div className={`${styles.successMessage} ${hideSuccess ? "" : styles.active}`}>
+                <div className={styles.message}>{t('links__success')}</div>
+            </div>
+            <div className={`${styles.failMessage} ${hideFail ? "" : styles.active}`}>
+                <div className={styles.message}>{t('links__fail')}</div>
+                </div>
         </form>
     );
 };

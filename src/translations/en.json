@@ -42,5 +42,7 @@
   "links__describe": "Your description",
   "submit": "Submit",
   "view-more": "View More",
-  "go-back": "Go Back"
+  "go-back": "Go Back",
+  "links__success": "Your message has been sent successfully!",
+  "links__fail": "Mistake! Try again or contact me in a way that is convenient for you."
 }

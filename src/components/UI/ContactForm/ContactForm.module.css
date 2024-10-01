@@ -85,3 +85,35 @@
 .submit:hover .submitInput {
     color: #180E49;
 }
+
+.submit.hidden{
+    display: none;
+}
+
+.successMessage, .failMessage{
+    display: none;
+    align-self: center;
+    transition: display 0.5s ease;
+    overflow: hidden;
+    width: 100%;
+}
+
+.message{
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.successMessage .message{
+    background: #006064;
+}
+
+.failMessage .message{
+    background: #cb5d5d;
+}
+
+.successMessage.active, .failMessage.active{
+    display: flex;
+}
