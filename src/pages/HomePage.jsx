@@ -12,6 +12,7 @@ import {Link} from 'react-router-dom'
 import {useTranslation} from 'react-i18next';
 import AnchorScroll from "../components/AnchorScroll";
 import tags from '../data/tags';
+import ContactForm from "../components/UI/ContactForm/ContactForm";
 
 
 const HomePage = () => {
@@ -492,27 +493,7 @@ const HomePage = () => {
                                 </AppearElement>
                             </a>
                         </div>
-                        <form className="links-form">
-                            <div className="links-form__heading">{t('links__heading')}</div>
-                            <div className="links-form__field">
-                                <label htmlFor="name" className="links-form__label">{t('links__name-head')}</label>
-                                <input id="name" type="text" required className="links-form__input"
-                                       placeholder={t('links__name')}/>
-                            </div>
-                            <div className="links-form__field">
-                                <label htmlFor="contact" className="links-form__label">{t('links__contact-head')}</label>
-                                <input id="contact" type="text" required className="links-form__input"
-                                       placeholder={t('links__contact')}/>
-                            </div>
-                            <div className="links-form__field">
-                                <label htmlFor="describe" className="links-form__label">{t('links__describe-head')}</label>
-                                <textarea id="describe" className="links-form__input links-form__input_comment"
-                                          placeholder={t('links__describe')}/>
-                            </div>
-                            <div className="links-form__submit cursorPointer">
-                                <input type="submit" className="links-form__submit-input" value={t('submit')}/>
-                            </div>
-                        </form>
+                        <ContactForm />
                     </div>
                     <div className="rights">©2024 MARYYAK</div>
                 </div>

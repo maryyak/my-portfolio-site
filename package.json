@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^11.3.24",
     "global": "^4.4.0",
     "gltf-pipeline": "^4.1.0",

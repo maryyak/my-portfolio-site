@@ -710,7 +710,7 @@ a:hover {
     gap: 100px;
 }
 
-.links__cards, .links-form {
+.links__cards {
     width: 100%;
 }
 
@@ -723,93 +723,6 @@ a:hover {
 .links__card:hover .links__card-bg {
     transition: transform 0.5s ease;
     transform: rotate(200deg);
-}
-
-.links-form {
-    gap: 30px;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    padding: 55px;
-    border: 1px solid rgba(245, 247, 250, 0.06);
-    border-radius: 40px;
-    backdrop-filter: blur(109px);
-    box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
-    background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0) 100%);
-}
-
-.links-form__heading {
-    font-size: 30px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.links-form__field {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.links-form__input {
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 15px;
-    font-family: "Montserrat", sans-serif;
-}
-
-.links-form__input::placeholder {
-    font-size: 15px;
-    font-family: "Montserrat", sans-serif;
-}
-
-.links-form__label {
-    font-size: 20px;
-}
-
-.links-form__input_comment {
-    min-height: 120px;
-}
-
-.links-form__submit {
-    width: fit-content;
-    align-self: center;
-    padding: 10px 50px;
-    border-radius: 20px;
-    border: 2px solid white;
-    position: relative;
-    overflow: hidden;
-}
-
-.links-form__submit-input {
-    font-size: 20px;
-    background: none;
-    color: white;
-    border: none;
-    font-weight: 500;
-    transition: color 0.5s ease;
-    width: 100px;
-}
-
-.links-form__submit::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 170px;
-    background: linear-gradient(135deg, rgba(209, 196, 233, 0.7) 0%, rgba(209, 196, 233, 0.4) 52.14%, rgba(209, 196, 233, 0.1) 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transform: rotate(-45deg) translate(0, -125%);
-    transition: transform 0.5s ease;
-}
-
-.links-form__submit:hover::after {
-    transform: rotate(-45deg) translate(15%, -23%);
-}
-
-.links-form__submit:hover .links-form__submit-input {
-    color: #180E49;
 }
 
 .rights {
