@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const AnchorScroll = ({ to, children }) => {
-    const handleClick = () => {
-        const element = typeof to === 'string' ? document.querySelector(to) : to.current;
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const handleClick = (event) => {
+        event.preventDefault();
+
+        if (to.startsWith('#')) {
+            const targetElement = document.querySelector(to);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            navigate(to);
         }
     };
 
-    const clonedChild = React.cloneElement(children, {
-        onClick: handleClick,
-    });
+    useEffect(() => {
+        if (location.hash) {
+            const targetElement = document.querySelector(location.hash);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location]);
 
-    return clonedChild;
+    return (
+        <Link to={to} onClick={handleClick}>
+            {children}
+        </Link>
+    );
 };
 
 export default AnchorScroll;
