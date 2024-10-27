@@ -26,7 +26,7 @@ body {
 
 h1 {
     font-family: Angst, sans-serif;
-    font-size: 90px;
+    font-size: 85px;
     font-weight: bold;
     color: white;
 }
@@ -88,7 +88,7 @@ a:hover {
 
 .logo__navbar {
     font-size: 33px;
-    padding-bottom: 45px;
+    padding-bottom: 10px;
 }
 
 .logo__navbar:hover {
@@ -486,10 +486,10 @@ a:hover {
     0 0 100px rgba(132, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 72px;
+    padding: 30px 50px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
 }
 
 .price-table__bg {
@@ -502,11 +502,11 @@ a:hover {
 .price-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .price-table__th, .price-table__td {
-    padding: 10px 15px;
+    padding: 6px 15px;
     text-align: left;
     border-bottom: 2px dashed #180E49;
 }
@@ -569,7 +569,7 @@ a:hover {
 }
 
 .pricing-card__title {
-    font-size: 24px;
+    font-size: 22px;
     color: #180E49;
     margin-bottom: 10px;
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
@@ -579,7 +579,7 @@ a:hover {
 .pricing-card__price {
     font-size: 21px;
     color: #180E49;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     transition: color 0.5s ease;
 }
@@ -591,7 +591,7 @@ a:hover {
 .pricing-card__features {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin-bottom: 15px;
 }
 
 .pricing-card__info {
@@ -599,9 +599,9 @@ a:hover {
 }
 
 .pricing-card__features li {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
     border-bottom: 1px dashed #180E49;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
     color: #180E49;
 }
 
@@ -652,7 +652,17 @@ a:hover {
 }
 
 .container_links {
-    gap: 30px;
+    gap: 15px;
+}
+
+.links-row{
+    align-items: center;
+}
+
+.links__icons{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 .links__card {
@@ -661,13 +671,14 @@ a:hover {
 }
 
 .links__card_github {
-    width: 300px;
-    height: 300px;
+    width: 230px;
+    height: 230px;
+    margin-top: 30px;
 }
 
 .links__card_tg {
-    width: 350px;
-    height: 350px;
+    width: 270px;
+    height: 270px;
     margin-left: 140px;
     margin-top: -75px;
 }
@@ -707,11 +718,14 @@ a:hover {
 .links-row {
     display: flex;
     flex-direction: row;
-    gap: 100px;
+    align-items: flex-end;
+    gap: 70px;
 }
 
 .links__cards {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .links__background {

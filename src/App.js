@@ -2,6 +2,7 @@ import React from "react";
 import {BrowserRouter} from "react-router-dom";
 import ScrollRestoration from "./components/ScrollRestoration";
 import './styles/App.css';
+import './styles/adaptive.css';
 import usePageLoading from "./hooks/usePageLoading";
 import AppRouter from "./components/AppRouter";
 import Navbar from "./components/UI/Navbar/Navbar";

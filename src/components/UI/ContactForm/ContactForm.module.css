@@ -1,10 +1,10 @@
 .linksForm {
     width: 100%;
-    gap: 30px;
+    gap: 20px;
     display: flex;
     flex-direction: column;
     color: white;
-    padding: 55px;
+    padding: 45px;
     border: 1px solid rgba(245, 247, 250, 0.06);
     border-radius: 40px;
     backdrop-filter: blur(109px);

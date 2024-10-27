@@ -16,7 +16,7 @@ const NavbarContent = ({ isHomePage }) => {
 
     return (
         <>
-            <AnchorScroll to={isHomePage ? `#` : `/`}>
+            <AnchorScroll to={isHomePage ? `#root` : `/`}>
                 <div className="logo logo__navbar cursorPointer">maryyak</div>
             </AnchorScroll>
             {links.map(({ to, label }) => (
@@ -24,7 +24,7 @@ const NavbarContent = ({ isHomePage }) => {
                     <AnchorScroll to={isHomePage ? to : `/#${to.slice(1)}`}>
                         <div className={`${styles.navbarLink} cursorPointer`}>{label}</div>
                     </AnchorScroll>
-                    <div className={styles.separator}></div>
+                    <div className={(to !== "#links") ? styles.separator : ""}></div>
                 </React.Fragment>
             ))}
         </>
