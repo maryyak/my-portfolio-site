@@ -4,15 +4,16 @@ import styles from './Carousel.module.css';
 const Carousel = ({children, visibleItems = 1, gap = 0}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const carouselRef = useRef(null);
+    const [touchStartX, setTouchStartX] = useState(0);
     const [accumulatedScroll, setAccumulatedScroll] = useState(0);
 
     const scrollThreshold = 300;
     const totalItems = React.Children.count(children);
+    visibleItems = window.innerWidth < 901 ? 1 : visibleItems;
 
     useEffect(() => {
         const handleScroll = (event) => {
             event.preventDefault();
-
             setAccumulatedScroll(prevAccumulatedScroll => {
                 const newAccumulatedScroll = prevAccumulatedScroll + event.deltaY;
 
@@ -29,14 +30,37 @@ const Carousel = ({children, visibleItems = 1, gap = 0}) => {
             });
         };
 
-        carouselRef.current.addEventListener('wheel', handleScroll);
+        const handleTouchStart = (event) => {
+            setTouchStartX(event.touches[0].clientX);
+        };
 
-        return () => {
-            if (carouselRef.current) {
-                carouselRef.current.removeEventListener('wheel', handleScroll);
+        const handleTouchEnd = (event) => {
+            const touchEndX = event.changedTouches[0].clientX;
+            const touchDelta = touchStartX - touchEndX;
+
+            if (Math.abs(touchDelta) > 30) {
+                if (touchDelta > 0) {
+                    handleNext();
+                } else {
+                    handlePrev();
+                }
             }
         };
-    }, [])
+
+        const carousel = carouselRef.current;
+        carousel.addEventListener('wheel', handleScroll);
+        carousel.addEventListener('touchstart', handleTouchStart);
+        carousel.addEventListener('touchend', handleTouchEnd);
+
+        return () => {
+            if (carousel) {
+                carousel.removeEventListener('wheel', handleScroll);
+                carousel.removeEventListener('touchstart', handleTouchStart);
+                carousel.removeEventListener('touchend', handleTouchEnd);
+            }
+        };
+    }, []);
+
 
     const handlePrev = () => {
         setCurrentIndex((prevIndex) =>
@@ -51,8 +75,8 @@ const Carousel = ({children, visibleItems = 1, gap = 0}) => {
     };
 
     const trackWidth = `calc(${100 * totalItems / visibleItems}% + ${gap * (totalItems / visibleItems - 1)}px)`;
-    const itemWidth = `calc(${100 / totalItems}% - ${gap - (gap / visibleItems)}px)`;
-    const translateX = `calc(-${currentIndex * (100 / totalItems)}% - ${currentIndex * (gap / totalItems)}px + ${100 / totalItems}% + ${gap / totalItems}px)`;
+    const itemWidth = `calc(${trackWidth / totalItems}%)`;
+    const translateX = window.innerWidth < 901 ? `calc(-${currentIndex * (100 / totalItems)}% - ${currentIndex * (gap / totalItems)}px)` : `calc(-${currentIndex * (100 / totalItems)}% - ${currentIndex * (gap / totalItems)}px + ${100 / totalItems}% + ${gap / totalItems}px)`;
 
     return (
         <div className={styles.carousel} ref={carouselRef}>

@@ -43,8 +43,8 @@ const SplinesBackground = ({ options = DEFAULT_OPTIONS}) => {
                         animate={{
                             opacity: 1,
                             rotate: 0,
-                            left: '19%',
-                            top: '30%'
+                            left: window.innerWidth > 700 ? '19%' : '8%',
+                            top: window.innerWidth > 700 ? '30%' : '15%'
                         }}
                         transition={options.transition}>
                 <img src="/images/Circle-2.png" alt="Splines" draggable="false"/>
@@ -59,8 +59,8 @@ const SplinesBackground = ({ options = DEFAULT_OPTIONS}) => {
                         animate={{
                             opacity: 1,
                             rotate: 0,
-                            right: '4%',
-                            bottom: '5%'
+                            right: window.innerWidth > 700 ? '4%' : '-50%',
+                            bottom: window.innerWidth > 700 ? '4%' : '20%'
                         }}
                         transition={options.transition}>
                 <img src="/images/Circle-1.png" alt="Splines" draggable="false"/>

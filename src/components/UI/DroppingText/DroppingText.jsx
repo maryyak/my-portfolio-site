@@ -26,12 +26,22 @@ const DroppingText = ({options = DEFAULT_OPTIONS, text, id}) => {
         containerRef.current.insertAdjacentHTML("beforeend", filter);
     };
 
-    const wrapLetters = (word) => {
-        return Array.from(word).map((letter) => {
-            const className = `${styles[options.letterClassName]} ${styles[`${options.letterClassName}`]}`;
-            return <div className={className} key={Math.random()}>{letter}</div>;
-        });
+    const wrapLetters = (text) => {
+        const words = text.split(' ');
+        return words.map((word, wordIndex) => (
+            <div key={wordIndex} className={styles.word}>
+                {Array.from(word).map((letter, letterIndex) => (
+                    <div
+                        className={`${styles[options.letterClassName]} ${styles[`${options.letterClassName}`]}`}
+                        key={`${wordIndex}-${letterIndex}`}
+                    >
+                        {letter}
+                    </div>
+                ))}
+            </div>
+        ));
     };
+
 
     const addDelayToEachLetter = () => {
         const letters = containerRef.current.querySelectorAll(`.${styles[options.letterClassName]}`);

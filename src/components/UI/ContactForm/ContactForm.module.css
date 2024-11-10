@@ -86,11 +86,11 @@
     color: #180E49;
 }
 
-.submit.hidden{
+.submit.hidden {
     display: none;
 }
 
-.successMessage, .failMessage{
+.successMessage, .failMessage {
     display: none;
     align-self: center;
     transition: display 0.5s ease;
@@ -98,7 +98,7 @@
     width: 100%;
 }
 
-.message{
+.message {
     padding: 10px 20px;
     border-radius: 20px;
     width: 100%;
@@ -106,14 +106,62 @@
     color: white;
 }
 
-.successMessage .message{
+.successMessage .message {
     background: #006064;
 }
 
-.failMessage .message{
+.failMessage .message {
     background: #cb5d5d;
 }
 
-.successMessage.active, .failMessage.active{
+.successMessage.active, .failMessage.active {
     display: flex;
+}
+
+@media (max-width: 1350px) {
+    .linksForm {
+        padding: 30px;
+    }
+
+    .heading {
+        font-size: 25px;
+    }
+
+    .field {
+        gap: 10px;
+    }
+
+    .label {
+        font-size: 17px;
+    }
+
+    .input {
+        padding: 7px;
+    }
+
+    .input_comment {
+        min-height: 100px;
+    }
+
+    .submitInput {
+        font-size: 18px;
+    }
+
+    .submit {
+        padding: 8px 35px;
+    }
+}
+
+@media (max-width: 400px) {
+    .linksForm {
+        padding: 15px;
+    }
+
+    .heading {
+        font-size: 21px;
+    }
+
+    .label {
+        font-size: 15px;
+    }
 }

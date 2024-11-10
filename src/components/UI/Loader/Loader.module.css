@@ -89,3 +89,9 @@
     0%, 50% { z-index: -1; }
     51%, 100% { z-index: 1; }
 }
+
+@media (max-width: 700px) {
+    :root {
+        --loader-size: 3px;
+    }
+}

@@ -41,3 +41,13 @@
 .rotateAppear.animate{
     transform: rotate(0);
 }
+
+@media (max-width: 1350px) {
+    .rightAppear{
+        transform: translateX(80%);
+    }
+
+    .leftAppear{
+        transform: translateX(-80%);
+    }
+}

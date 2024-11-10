@@ -71,52 +71,52 @@ const HomePage = () => {
                     <div className="backgroundHeading">
                         <DroppingText text={t('my-stack')} id="my-stack"/>
                     </div>
-                    <AppearElement from={"left"} id="stack_list">
-                        <div className="stack_list">
-                            <div className="stack_row">
-                                <div className="stack_element">
-                                    <div className="stack_heading">{t('languages')}</div>
-                                    <div className="stack_ul">
-                                        <div className="stack_li">HTML</div>
-                                        <div className="stack_li">CSS</div>
-                                        <div className="stack_li">JavaScript</div>
-                                        <div className="stack_li">PHP</div>
-                                        <div className="stack_li">Python</div>
-                                        <div className="stack_li">C++</div>
+                    <AppearElement from={"left"} id="stack__list">
+                        <div className="stack__list">
+                            <div className="stack__row">
+                                <div className="stack__element">
+                                    <div className="stack__heading">{t('languages')}</div>
+                                    <div className="stack__ul">
+                                        <div className="stack__li">HTML</div>
+                                        <div className="stack__li">CSS</div>
+                                        <div className="stack__li">JavaScript</div>
+                                        <div className="stack__li">PHP</div>
+                                        <div className="stack__li">Python</div>
+                                        <div className="stack__li">C++</div>
                                     </div>
                                 </div>
-                                <div className="stack_element">
-                                    <div className="stack_heading">{t('website-builders')}</div>
-                                    <div className="stack_ul">
-                                        <div className="stack_li">Wordpress</div>
-                                        <div className="stack_li">Tilda</div>
+                                <div className="stack__element">
+                                    <div className="stack__heading">{t('website-builders')}</div>
+                                    <div className="stack__ul">
+                                        <div className="stack__li">Wordpress</div>
+                                        <div className="stack__li">Tilda</div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="stack_row">
-                                <div className="stack_element">
-                                    <div className="stack_heading">{t('libraries-tools')}</div>
-                                    <div className="stack_ul">
-                                        <div className="stack_li">React</div>
-                                        <div className="stack_li">Three.js</div>
-                                        <div className="stack_li">jQuery</div>
-                                        <div className="stack_li">Bootstrap</div>
+                            <div className="stack__row">
+                                <div className="stack__element">
+                                    <div className="stack__heading">{t('libraries-tools')}</div>
+                                    <div className="stack__ul">
+                                        <div className="stack__li">React</div>
+                                        <div className="stack__li">Three.js</div>
+                                        <div className="stack__li">jQuery</div>
+                                        <div className="stack__li">Bootstrap</div>
                                     </div>
                                 </div>
-                                <div className="stack_element">
-                                    <div className="stack_heading">{t('miscellaneous')}</div>
-                                    <div className="stack_row">
-                                        <div className="stack_ul">
-                                            <div className="stack_li">SQLite</div>
-                                            <div className="stack_li">FTP</div>
-                                            <div className="stack_li">Figma</div>
-                                            <div className="stack_li">Git</div>
+                                <div className="stack__element">
+                                    <div className="stack__heading">{t('miscellaneous')}</div>
+                                    <div className="stack__row">
+                                        <div className="stack__ul">
+                                            <div className="stack__li">SQLite</div>
+                                            <div className="stack__li">FTP</div>
+                                            <div className="stack__li">Figma</div>
+                                            <div className="stack__li">Git</div>
                                         </div>
-                                        <div className="stack_ul">
-                                            <div className="stack_li">API</div>
-                                            <div className="stack_li">Photoshop</div>
-                                            <div className="stack_li">JSON</div>
-                                            <div className="stack_li">BEM</div>
+                                        <div className="stack__ul">
+                                            <div className="stack__li">API</div>
+                                            <div className="stack__li">Photoshop</div>
+                                            <div className="stack__li">JSON</div>
+                                            <div className="stack__li">BEM</div>
                                         </div>
                                     </div>
                                 </div>
@@ -274,8 +274,8 @@ const HomePage = () => {
                     <h1 className="dark">
                         <DroppingText text={t('price')} id="price"/>
                     </h1>
-                    <AppearElement from={"bottom"} id="pricing-cards">
-                        <div className="pricing-cards">
+                    <div className="pricing-cards">
+                        <AppearElement from={"bottom"} id="pricing-card-1">
                             <div className="pricing-card">
                                 <div className="pricing-card__info">
                                     <div className="pricing-card__bg"></div>
@@ -293,6 +293,8 @@ const HomePage = () => {
                                     </AnchorScroll>
                                 </div>
                             </div>
+                        </AppearElement>
+                        <AppearElement from={"bottom"} id="pricing-card-2">
                             <div className="pricing-card">
                                 <div className="pricing-card__info">
                                     <div className="pricing-card__bg"></div>
@@ -310,6 +312,8 @@ const HomePage = () => {
                                     </AnchorScroll>
                                 </div>
                             </div>
+                        </AppearElement>
+                        <AppearElement from={"bottom"} id="pricing-card-3">
                             <div className="pricing-card">
                                 <div className="pricing-card__info">
                                     <div className="pricing-card__bg"></div>
@@ -327,8 +331,8 @@ const HomePage = () => {
                                     </AnchorScroll>
                                 </div>
                             </div>
-                        </div>
-                    </AppearElement>
+                        </AppearElement>
+                    </div>
                     <AppearElement from={"bottom"} id="price-additions">
                         <div className="price-additions">
                             <div className="price__subheading">{t('additions')}</div>

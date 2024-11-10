@@ -26,3 +26,16 @@
     right: 4%;
     bottom: 5%;
 }
+
+@media (max-width: 700px) {
+    .splinesSmallImage{
+        left: -70px;
+        top: 51%;
+    }
+
+    .splinesLargeImage{
+        top: -30%;
+        right: -55%;
+        left: 41%;
+    }
+}

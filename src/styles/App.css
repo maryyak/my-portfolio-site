@@ -70,6 +70,7 @@ a:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 50px;
 }
 
 .combined-heading .text {
@@ -122,6 +123,7 @@ a:hover {
     flex-wrap: nowrap;
     justify-content: space-between;
     position: relative;
+    align-items: center;
 }
 
 .textBlock {
@@ -136,6 +138,9 @@ a:hover {
     width: 100%;
     max-width: 400px;
     height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .imgBlock img {
@@ -179,29 +184,29 @@ a:hover {
     position: relative;
 }
 
-.stack_list, .stack_element, .stack_ul {
+.stack__list, .stack__element, .stack__ul {
     display: flex;
     flex-direction: column;
 }
 
-.stack_list {
+.stack__list {
     gap: 50px;
     width: 50%;
     justify-content: space-between;
 }
 
-.stack_row {
+.stack__row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.stack_element {
+.stack__element {
     gap: 15px;
     width: 100%;
 }
 
-.stack_heading {
+.stack__heading {
     line-height: 120%;
     font-weight: 600;
     font-size: 32px;
@@ -211,11 +216,11 @@ a:hover {
     -webkit-text-fill-color: transparent;
 }
 
-.stack_ul {
+.stack__ul {
     gap: 6px;
 }
 
-.stack_li {
+.stack__li {
     font-weight: 400;
     font-size: 24px;
     line-height: 150%;
@@ -611,7 +616,7 @@ a:hover {
     padding: 10px 20px;
     background: rgba(248, 187, 208, 0.3);
     backdrop-filter: blur(10px);
-    color: #fff;
+    color: #180E49;
     text-decoration: none;
     border-radius: 30px;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -621,7 +626,6 @@ a:hover {
 
 .pricing-card__button:hover {
     background: rgba(248, 187, 208, 0.5);
-    color: #180E49;
 }
 
 .price__subheading {
@@ -653,10 +657,6 @@ a:hover {
 
 .container_links {
     gap: 15px;
-}
-
-.links-row{
-    align-items: center;
 }
 
 .links__icons{

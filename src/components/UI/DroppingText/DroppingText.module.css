@@ -5,7 +5,8 @@
 .puddle {
     position: relative;
     display: flex;
-    white-space: pre;
+    flex-wrap: wrap;
+    gap: 0 20px;
 }
 
 .puddle__letter {
@@ -22,6 +23,11 @@
     z-index: -1;
     filter: url(#drops-filter);
     user-select: none;
+}
+
+.word {
+    display: flex;
+    flex-direction: row;
 }
 
 @keyframes drop {

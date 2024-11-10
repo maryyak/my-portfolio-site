@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +7,7 @@
     white-space: nowrap;
 }
 
-.navbarWrapper{
+.navbarWrapper {
     position: fixed;
     left: 27px;
     top: 50%;
@@ -19,15 +19,16 @@
     box-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4), -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
     overflow: hidden;
     border: 3px solid #D1C4E9;
+    transition: none;
 }
 
-.navbarLink{
+.navbarLink {
     text-transform: uppercase;
     font-size: 30px;
     color: #D1C4E9;
 }
 
-.separator{
+.separator {
     height: 10px;
     width: 10px;
     background-color: #D1C4E9;
@@ -35,17 +36,17 @@
     flex-shrink: 0;
 }
 
-.navbarUnscrolled{
+.navbarUnscrolled {
     background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0) 100%);
     border-radius: 100px;
     padding: 50px 30px;
 }
 
-.navbarScrolled{
+.navbarScrolled {
     padding-top: 50px;
 }
 
-.navbarScrolledWrapper{
+.navbarScrolledWrapper {
     position: absolute;
     top: 0;
     background: linear-gradient(135deg, rgba(209, 196, 233, 0.7) 0%, rgba(209, 196, 233, 0.4) 52.14%, rgba(209, 196, 233, 0.1) 100%);
@@ -53,15 +54,15 @@
     overflow: hidden;
 }
 
-.navbarScrolled .navbarLink{
+.navbarScrolled .navbarLink {
     color: #180E49;
 }
 
-.navbarScrolled .separator{
+.navbarScrolled .separator {
     background: #180E49;
 }
 
-.navbarBackground{
+.navbarBackground {
     position: absolute;
     top: 0;
     background: #180E49;
@@ -69,19 +70,19 @@
     overflow: hidden;
 }
 
-.navbarLink:hover{
+.navbarLink:hover {
     color: var(--hover-color);
     font-weight: bold;
     transition: color 0.4s ease-in-out, font-weight 0.4s ease-in-out;
 }
 
-.langButtons{
+.langButtons {
     border: 1px solid white;
     border-radius: 15px;
     overflow: hidden;
 }
 
-.langButton{
+.langButton {
     border: none;
     background: none;
     color: white;
@@ -89,12 +90,185 @@
     font-size: 15px;
 }
 
-.langButton:hover{
+.langButton:hover {
     color: var(--hover-color);
     font-weight: bold;
     transition: color 0.4s ease-in-out, font-weight 0.4s ease-in-out;
 }
 
-.langButton:nth-child(1){
+.langButton:nth-child(1) {
     border-right: 1px solid white;
+}
+
+.burgerButton {
+    display: none;
+    flex-direction: column;
+    gap: 7px;
+    border: 0;
+    background: none;
+}
+
+.burgerSpan {
+    display: block;
+    width: 27px;
+    height: 2px;
+    border-radius: 10px;
+    background: white;
+}
+
+.navbarLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    display: flex;
+    grid-area: center;
+    transition: height 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+@media (max-width: 1350px) {
+    .navbar {
+        width: 140px;
+    }
+
+    .navbarWrapper {
+        left: 15px;
+    }
+
+    .navbarLink {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 901px) {
+    .burgerButton {
+        display: flex;
+        z-index: 99;
+    }
+
+    .navbarWrapper {
+        left: 45px;
+        top: 45px;
+        right: 45px;
+        transform: none;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        padding: 30px;
+        gap: 0;
+        grid-template-areas:
+        '. . .'
+        'center center center ';
+    }
+
+    .navbarScrolledWrapper, .navbarBackground {
+        display: none;
+    }
+
+    .langButtons {
+        width: fit-content;
+    }
+
+    .burgerButton {
+        align-items: flex-end;
+    }
+
+    .navbarLinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        display: flex;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+        opacity: 0;
+        transform: translateY(-10px);
+        margin-top: -50px;
+        padding-top: 40px;
+    }
+
+    .navbarLinks.active {
+        max-height: 440px;
+        opacity: 1;
+        transform: translateY(0);
+        margin-top: 0;
+    }
+
+    .navbarUnscrolled {
+        border-radius: 50px;
+    }
+
+    .navbarWrapper {
+        border-radius: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbarWrapper {
+        left: 15px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .logo__navbar {
+        font-size: 25px;
+    }
+
+    .langButton {
+        padding: 4px 9px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar{
+        padding: 10px;
+    }
+
+    .langButton{
+        padding: 4px 6px;
+        font-size: 11px;
+    }
+
+    .burgerButton{
+        gap: 5px;
+    }
+
+    .burgerSpan {
+        width: 23px;
+    }
+
+    .navbarLink{
+        font-size: 17px;
+    }
+
+    .navbarLinks{
+        gap: 15px;
+        padding-top: 20px;
+    }
+
+    .navbarLinks.active{
+        max-height: 275px;
+    }
+
+    .separator{
+        height: 6px;
+        width: 6px;
+    }
+
+    .navbarUnscrolled {
+        border-radius: 25px;
+    }
+
+    .navbarWrapper {
+        border-radius: 25px;
+    }
 }

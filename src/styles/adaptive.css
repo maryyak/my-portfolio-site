@@ -1,15 +1,395 @@
-@media (max-width: 1439px) {
+@media (max-width: 1350px) {
+    .logo__navbar {
+        font-size: 30px;
+    }
 
+    .container {
+        padding-right: 15px;
+        padding-left: 176px;
+    }
+
+    .logo__large {
+        font-size: 59px;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    .about {
+        padding: 50px;
+        gap: 50px;
+    }
+
+    .backgroundHeading * {
+        font-size: 140px;
+    }
+
+    .stack__li {
+        font-size: 19px;
+    }
+
+    .stack__heading {
+        font-size: 24px;
+    }
+
+    .works_content {
+        padding-left: 0;
+    }
+
+    .works_tag {
+        font-size: 14px;
+    }
+
+    .works_name {
+        font-size: 23px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .price {
+        gap: 10px;
+        padding: 30px;
+    }
+
+    .pricing-cards {
+        gap: 10px;
+    }
+
+    .pricing-card {
+        padding: 20px;
+    }
+
+    .pricing-card__features li {
+        font-size: 14px;
+    }
+
+    .pricing-card__title {
+        font-size: 21px;
+    }
+
+    .pricing-card__title {
+        margin-bottom: 5px;
+    }
+
+    .pricing-card__price {
+        font-size: 20px;
+    }
+
+    .price-table__th, .price-table__td {
+        padding: 4px 10px;
+    }
+
+    .price-table__th {
+        font-size: 15px;
+    }
+
+    .price-table__td {
+        font-size: 17px;
+    }
+
+    .price-additions {
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .price__subheading {
+        font-size: 26px;
+    }
+
+    .links-row {
+        gap: 10px;
+        align-items: center;
+    }
+
+    .links__card_github {
+        width: 180px;
+        height: 180px;
+    }
+
+    .links__card_tg {
+        width: 200px;
+        height: 200px;
+    }
+
+    .links__card_email {
+        width: 140px;
+        height: 140px;
+    }
+
+    .links__card_tg .links__card-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .links__card_github .links__card-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .links__card_email .links__card-img {
+        width: 60px;
+        height: 60px;
+    }
 }
 
-@media (max-width: 1001px) {
+@media (max-width: 901px) {
+    .gallery, .gallery__col, .gallery__row {
+        gap: 20px;
+    }
 
+    .works-page {
+        padding-top: 200px;
+    }
+
+    .container {
+        padding-left: 45px;
+        padding-right: 45px;
+        padding-bottom: 30px;
+    }
+
+    .container_mainBanner {
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 69px;
+    }
+
+    .logo__navbar {
+        padding-bottom: 0;
+        text-align: center;
+    }
+
+    .container_mainBanner h1 div {
+        justify-content: center;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .textBlock {
+        gap: 30px;
+        align-items: center;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .stack {
+        flex-direction: column-reverse;
+    }
+
+    .stack__list {
+        gap: 50px;
+        width: 100%;
+    }
+
+    .stack__heading {
+        font-size: 30px;
+    }
+
+    .stack__li {
+        font-size: 25px;
+    }
+
+    .works_name {
+        font-size: 40px;
+    }
+
+    .works_tag {
+        font-size: 25px;
+    }
+
+    .works_tag {
+        padding: 16px 18px;
+    }
+
+    .pricing-cards {
+        flex-direction: column;
+    }
+
+    .pricing-card__price {
+        font-size: 23px;
+    }
+
+    .pricing-card__title {
+        font-size: 25px;
+    }
+
+    .pricing-card__features li {
+        font-size: 15px;
+    }
+
+    .links-row {
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 30px;
+    }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 700px) {
+    h1 {
+        font-size: 52px;
+    }
 
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
+
+    .logo__large {
+        font-size: 46px;
+    }
+
+    .about {
+        padding: 30px;
+    }
+
+    .textBlock {
+        gap: 15px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+
+    .imgBlock {
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .stack__li {
+        font-size: 17px;
+    }
+
+    .stack__heading {
+        font-size: 22px;
+    }
+
+    .combined-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .works_name {
+        font-size: 32px;
+    }
+
+    .works_tag {
+        padding: 14px 16px;
+        font-size: 20px;
+    }
+
+    .price-table__tr {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 2px dashed #180E49;
+    }
+
+    .price-table tbody {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .price-table__th, .price-table__td {
+        border-bottom: 0;
+    }
+
+    .price-table__th {
+        font-size: 16px;
+    }
+
+    .gallery__row {
+        flex-direction: column;
+    }
+
+    .works-page {
+        padding-top: 150px;
+    }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
+    h1 {
+        font-size: 39px;
+    }
 
+    .logo__large {
+        font-size: 38px;
+    }
+
+    .logo__navbar {
+        font-size: 23px;
+    }
+
+    .about {
+        padding: 20px 10px;
+        gap: 15px;
+    }
+
+    .text {
+        font-size: 13px;
+    }
+
+    .works_name {
+        font-size: 23px;
+    }
+
+    .works_tag {
+        padding: 7px 10px;
+        font-size: 14px;
+    }
+
+    .price {
+        padding: 20px;
+    }
+
+    .pricing-card {
+        padding: 10px;
+    }
+
+    .pricing-card__price {
+        font-size: 19px;
+    }
+
+    .pricing-card__title {
+        font-size: 21px;
+    }
+
+    .pricing-card__features li {
+        font-size: 14px;
+    }
+
+    .price-additions {
+        padding: 10px;
+    }
+
+    .links__card_tg {
+        margin-left: 85px;
+    }
+
+    .works-page {
+        padding-top: 100px;
+        gap: 30px;
+    }
+
+    .works-button {
+        max-width: 156px;
+        gap: 10px;
+        padding: 2px 9px;
+    }
+
+    .works-button__text {
+        white-space: pre;
+        font-size: 16px;
+    }
 }
