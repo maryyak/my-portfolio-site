@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
 }
 
 :root {
@@ -63,6 +62,7 @@ a:hover {
 .text {
     color: var(--text-color);
     line-height: 170%;
+    white-space: pre-line;
 }
 
 .combined-heading {
@@ -320,7 +320,7 @@ a:hover {
     left: 10px;
     right: 10px;
     z-index: 1;
-    transition: bottom 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .works_description::before {
@@ -332,6 +332,7 @@ a:hover {
     display: block;
     background: #180E49;
     filter: blur(30px);
+    will-change: filter;
 }
 
 .works_tags {
@@ -342,7 +343,7 @@ a:hover {
     opacity: 1;
     transform: translateY(0);
     height: 27px;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .works_tag {

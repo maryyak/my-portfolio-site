@@ -4,9 +4,9 @@ import styles from './Carousel.module.css';
 const Carousel = ({children, visibleItems = 1, gap = 0}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const carouselRef = useRef(null);
-    const [touchStartX, setTouchStartX] = useState(0);
     const [accumulatedScroll, setAccumulatedScroll] = useState(0);
 
+    const touchStartX = useRef(0);
     const scrollThreshold = 300;
     const totalItems = React.Children.count(children);
     visibleItems = window.innerWidth < 901 ? 1 : visibleItems;
@@ -31,12 +31,12 @@ const Carousel = ({children, visibleItems = 1, gap = 0}) => {
         };
 
         const handleTouchStart = (event) => {
-            setTouchStartX(event.touches[0].clientX);
+            touchStartX.current = event.touches[0].clientX;
         };
 
         const handleTouchEnd = (event) => {
             const touchEndX = event.changedTouches[0].clientX;
-            const touchDelta = touchStartX - touchEndX;
+            const touchDelta = touchStartX.current - touchEndX;
 
             if (Math.abs(touchDelta) > 30) {
                 if (touchDelta > 0) {

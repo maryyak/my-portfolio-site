@@ -37,7 +37,7 @@ const NavbarContent = ({isHomePage, changeLanguage}) => {
                 {links.map(({to, label}) => (
                     <React.Fragment key={to}>
                         <AnchorScroll to={isHomePage ? to : `/#${to.slice(1)}`}>
-                            <div className={`${styles.navbarLink} cursorPointer`}>{label}</div>
+                            <div onClick={() => setMenuOpen(false)} className={`${styles.navbarLink} cursorPointer`}>{label}</div>
                         </AnchorScroll>
                         {to !== "#links" && <div className={styles.separator}></div>}
                     </React.Fragment>

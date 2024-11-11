@@ -1,3 +1,9 @@
+@media (min-width: 901px) {
+    * {
+        cursor: none;
+    }
+}
+
 @media (max-width: 1350px) {
     .logo__navbar {
         font-size: 30px;

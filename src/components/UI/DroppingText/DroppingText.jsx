@@ -60,7 +60,7 @@ const DroppingText = ({options = DEFAULT_OPTIONS, text, id}) => {
 
     return (
         <div className={styles.canvas} ref={containerRef}>
-            <div className={styles.puddle}>
+            <div className={styles.puddle} key={text}>
                 {wrapLetters(text)}
             </div>
         </div>
