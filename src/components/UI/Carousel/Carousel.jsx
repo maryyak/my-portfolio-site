@@ -80,9 +80,9 @@ const Carousel = ({children, visibleItems = 1, gap = 0}) => {
 
     return (
         <div className={styles.carousel} ref={carouselRef}>
-            {/*<button onClick={handlePrev} className={`${styles.carouselButton} ${styles.prevButton}`}>*/}
-            {/*    <img src="/assets/images/arrow.png" alt="arrow"/>*/}
-            {/*</button>*/}
+            <button onClick={handlePrev} className={`${styles.carouselButton} ${styles.prevButton} cursorPointer`}>
+                <img src="/images/circle-arrows.png" alt="arrow"/>
+            </button>
             <div className={styles.carouselContent}>
                 <div className={styles.carouselTrack}
                      style={{
@@ -107,9 +107,9 @@ const Carousel = ({children, visibleItems = 1, gap = 0}) => {
                     })}
                 </div>
             </div>
-            {/*<button onClick={handleNext} className={`${styles.carouselButton} ${styles.nextButton}`}>*/}
-            {/*    <img src="/assets/images/arrow.png" alt="arrow"/>*/}
-            {/*</button>*/}
+            <button onClick={handleNext} className={`${styles.carouselButton} ${styles.nextButton} cursorPointer`}>
+                <img src="/images/circle-arrows.png" alt="arrow"/>
+            </button>
         </div>
     );
 };

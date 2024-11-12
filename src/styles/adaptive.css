@@ -322,6 +322,14 @@
     .works-page {
         padding-top: 150px;
     }
+
+    .stack__list {
+        gap: 30px;
+    }
+
+    .stack__row {
+        gap: 30px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -397,5 +405,28 @@
     .works-button__text {
         white-space: pre;
         font-size: 16px;
+    }
+
+    .stack__ul {
+        gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .stack__element {
+        gap: 15px;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .stack__row {
+        gap: 10px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .stack__list {
+        gap: 10px;
     }
 }
